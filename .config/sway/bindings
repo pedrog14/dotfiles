@@ -1,0 +1,38 @@
+### Bindings
+
+# Adjust brightness
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+ | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+
+# Adjust volume
+bindsym --locked XF86AudioRaiseVolume exec (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || (wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ && wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK)
+bindsym --locked XF86AudioLowerVolume exec (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || (wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK)
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK
+
+# Player
+bindsym --locked XF86AudioPlay exec playerctl play-pause
+bindsym --locked XF86AudioPrev exec playerctl previous
+bindsym --locked XF86AudioNext exec playerctl next
+bindsym --locked XF86AudioStop exec playerctl stop
+
+# Toggle Touchpad
+bindsym --locked $mod+Control+XF86TouchpadToggle input type:touchpad events toggle enabled disabled
+
+# Take Screenshot
+bindsym Print exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
+bindsym $mod+Shift+Print exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
+# bindsym $mod+Shift+Print exec 'grim -g "$(slurp)" - | swappy -f -'
+
+# Emoji Menu
+bindsym $mod+m exec rofimoji
+
+# Copying and Pasting
+#
+# The keybind to select a clipping
+bindsym $mod+y           exec clipman --primary pick --tool rofi
+# Clear all clippings
+bindsym $mod+Shift+y     exec clipman clear -a
+# Remove a selected clipping
+bindsym $mod+Mod1+y      exec clipman clear --tool rofi
+# Empty the current clipping
+bindsym $mod+Ctrl+y      exec : | wl-copy -p

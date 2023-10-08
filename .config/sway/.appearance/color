@@ -1,0 +1,8 @@
+### Appearance - Color 
+client.background                   #ebdbb2
+client.focused              #d65d0e #fe8019 #ebdbb2 #af3a03 #d65d0e
+client.focused_inactive     #3c3836 #504945 #ebdbb2 #282828 #3c3836
+client.focused_tab_title    #3c3836 #504945 #ebdbb2
+client.unfocused            #282828 #3c3836 #a89984 #1d2021 #282828
+client.urgent               #282828 #cc241d #ebdbb2 #cc241d #cc241d
+client.placeholder          #000000 #0c0c0c #ebdbb2 #000000 #0c0c0c
