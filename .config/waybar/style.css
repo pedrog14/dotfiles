@@ -58,8 +58,9 @@ button:hover {
 
 #custom-menu {
 	margin: 1px 0;
-	margin-right: 4px;
-	padding: 0 .5em;
+	margin-right: 2px;
+	padding: 0 .25em;
+	font-family: 'Symbols Nerd Font Mono';
 	font-size: 14px;
 	font-weight: normal;
 }
@@ -101,7 +102,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-	color: #cc241d;
+	color: #fb4934;
 }
 
 #scratchpad.empty {
@@ -168,10 +169,10 @@ window#waybar.solo {
 
 #custom-power {
 	margin: 1px 0;
-	margin-left: 4px;
-	padding: 0 .525em;
+	margin-left: 2px;
+	padding: 0 .25em;
 	font-family: 'Symbols Nerd Font Mono';
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: normal;
 }
 
@@ -197,7 +198,7 @@ window#waybar.solo {
 
 #tray > .needs-attention {
 	-gtk-icon-effect: highlight;
-	background-color: rgba(204, 36, 29, 0.87);
+	background-color: rgba(251, 73, 52, 0.87);
 }
 
 #custom-media {
