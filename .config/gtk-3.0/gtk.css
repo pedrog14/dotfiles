@@ -1,11 +1,19 @@
-@define-color accent_color #83a598;
-@define-color accent_bg_color #458588;
+/*
+Generated with Gradience
+
+Issues caused by theming should be reported to Gradience repository, and not to upstream
+
+https://github.com/GradienceTeam/Gradience
+*/
+
+@define-color accent_color #fe8019;
+@define-color accent_bg_color #d65d0e;
 @define-color accent_fg_color #fbf1c7;
 @define-color destructive_color #fb4934;
 @define-color destructive_bg_color #cc241d;
 @define-color destructive_fg_color #fbf1c7;
-@define-color success_color #689d6a;
-@define-color success_bg_color #8ec07c;
+@define-color success_color #8ec07c;
+@define-color success_bg_color #689d6a;
 @define-color success_fg_color #fbf1c7;
 @define-color warning_color #fabd2f;
 @define-color warning_bg_color #d79921;
@@ -31,6 +39,17 @@
 @define-color popover_fg_color #fbf1c7;
 @define-color shade_color rgba(40, 40, 40, 0.36);
 @define-color scrollbar_outline_color rgba(40, 40, 40, 0.5);
+@define-color popover_shade_color rgba(40,40,40, 0.36);
+@define-color thumbnail_bg_color #3c3836;
+@define-color secondary_sidebar_backdrop_color #282828;
+@define-color sidebar_bg_color #3c3836;
+@define-color sidebar_fg_color #fbf1c7;
+@define-color sidebar_backdrop_color #282828;
+@define-color sidebar_shade_color rgba(40,40,40, 0.36);
+@define-color secondary_sidebar_bg_color #3c3836;
+@define-color secondary_sidebar_shade_color rgba(40, 40, 40, 0.36);
+@define-color secondary_sidebar_fg_color rgba(40,40,40, 0.8);
+@define-color thumbnail_fg_color rgba(40,40,40, 0.8);
 @define-color blue_1 rgb(131,165,152);
 @define-color blue_2 rgb(116,157,148);
 @define-color blue_3 rgb(100,149,144);
@@ -76,3 +95,23 @@
 @define-color dark_3 rgb(80,73,69);
 @define-color dark_4 rgb(60,56,54);
 @define-color dark_5 rgb(40,40,40);
+
+.navigation-sidebar {
+background-color: #282828;
+}
+
+/** Some apps use titlebar class and some window */
+.titlebar,
+window {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+/** also remove shaddows */
+decoration {
+	box-shadow: none;
+}
+
+decoration:backdrop {
+	box-shadow: none;
+}

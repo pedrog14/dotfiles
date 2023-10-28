@@ -4,7 +4,7 @@
 	// "height": 20, // Waybar height (to be removed for auto height)
 	// "width": 1280, // Waybar width
 	// "spacing": 8, // Gaps between modules (4px)
-	// "margin": "0 6",
+	"margin": "8 8 0 8",
 	// Choose the order of the modules
 	"modules-left": ["custom/menu", "sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window", "mpris"],
 	"modules-center": [],
@@ -81,8 +81,8 @@
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
-			"activated": "",
-			"deactivated": ""
+			"activated": "󰈈",
+			"deactivated": "󰈉"
 		}
 	},
 	"tray": {
@@ -188,15 +188,6 @@
 		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
 		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
 	},
-	/* "custom/cmus": {
-		"format": "♪ {}",
-		"max-length": 32,
-		"interval": 1,
-		"exec": "cmus-remote -C \"format_print '%a - %t'\"", // artist - title
-		"exec-if": "pgrep cmus",
-		"on-click": "cmus-remote -u",                        //toggle pause
-		"escape": true                                       //handle markup entities
-	}, */
 	"custom/menu": {
 		"format": "  ",
 		"tooltip": false,
@@ -205,6 +196,15 @@
 	"custom/power": {
 		"format": "  ",
 		"tooltip": false,
-		"on-click": "rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono \"' -font 'JetBrains Mono Medium 11' -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'"
+		"on-click": "rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono \"' -font 'JetBrains Mono Medium 11' -theme gruvbox-dark -theme-str 'window {width: 12em; border-radius: 8px;} listview {lines: 6;}'"
+	},
+	"bluetooth": {
+		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+		"format": " {status}",
+		"format-disabled": "a", // an empty format will hide the module
+		"format-connected": " {num_connections} connected",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
 	}
 }

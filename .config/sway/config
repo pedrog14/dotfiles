@@ -23,7 +23,7 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Imagens/wallpaper.png fill
+output * bg $HOME/.local/share/wallpapers/wallpaper.png fill
 #
 # Example configuration:
 #
@@ -35,11 +35,10 @@ output * bg $HOME/Imagens/wallpaper.png fill
 #
 # Example configuration:
 #
-exec swayidle -w\
-timeout 300 'chayang && swaylock -f -c 000000'\
-timeout 600 'swaymsg "output * power off"'\
-resume 'swaymsg "output * power on"'\
-before-sleep 'chayang && swaylock -f -c 000000'
+exec swayidle -w \
+timeout 300 'swaylock -f -c 000000' \
+timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -61,8 +60,7 @@ before-sleep 'chayang && swaylock -f -c 000000'
 
 # Keyboard
 input type:keyboard {
-	xkb_layout us
-	xkb_variant intl
+	xkb_layout br
 }
 
 # Mouse
@@ -100,7 +98,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "JetBrains Mono Medium 11" -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'
+bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "JetBrains Mono Medium 11" -theme gruvbox-dark -theme-str 'window {width: 12em; border-radius: 8px;} listview {lines: 6;}'
 
 #
 # Moving around:
@@ -225,3 +223,4 @@ include config.d/*
 include autostart
 include appearance
 include bindings
+# include swayfx

@@ -21,4 +21,3 @@ opt.writebackup = false
 g.mapleader = ' '
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
-g.user_emmet_install_global = 0

@@ -1,14 +1,13 @@
 ### Appearance customization
 default_border pixel 2
 
-gaps inner 4
-gaps outer 2
+gaps inner 8
 
-font pango: JetBrains Mono Medium 8
+font pango: JetBrains Mono Medium 9
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-	gsettings set $gnome-schema gtk-theme 'adw-gtk3-dark'
+	gsettings set $gnome-schema gtk-theme 'adw-gtk3'
 	gsettings set $gnome-schema icon-theme 'Papirus-Dark'
 	gsettings set $gnome-schema cursor-theme 'Simp1e-Gruvbox-Dark'
 	gsettings set $gnome-schema font-name 'Roboto'

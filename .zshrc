@@ -26,7 +26,7 @@ ZSH_THEME="passion"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -70,7 +70,14 @@ ZSH_THEME="passion"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf zsh-completions zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
+plugins=(
+	git
+	fzf
+	zsh-completions
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	zsh-history-substring-search
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +106,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f "/home/pedrog/.ghcup/env" ] && source "/home/pedrog/.ghcup/env" # ghcup-env

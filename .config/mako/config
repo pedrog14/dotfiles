@@ -1,9 +1,11 @@
 font=JetBrainsMonoMedium 11
-background-color=#282828dd
-text-color=#ebdbb2ff
+background-color=#3c3836dd
+text-color=#ebdbb2
 width=384
-height=192
+height=128
+padding=8
 border-size=2
-border-color=#d65d0eff
+#border-color=#a89984
+border-color=#fe8019
 
-default-timeout=10000
+default-timeout=5000

@@ -14,30 +14,30 @@ require('dashboard').setup({
 		shortcut = {
 			{
 				desc = '󰈔 New File',
-				group = 'GruvboxPurple',
+				group = 'GruvboxBlue',
 				action = 'ene',
 				key = 'n'
 			}, {
 				desc = '󰒲 Lazy',
-				group = 'GruvboxBlue',
+				group = 'GruvboxAqua',
 				action = 'Lazy',
 				key = 'l'
 			},
 			{
 				desc = '󰔱 Tree',
-				group = 'GruvboxAqua',
+				group = 'GruvboxGreen',
 				action = 'NvimTreeToggle',
 				key = 'o'
 			},
 			{
 				desc = '󰏓 Mason',
-				group = 'GruvboxGreen',
+				group = 'GruvboxYellow',
 				action = 'Mason',
 				key = 'm'
 			},
 			{
 				desc = '󰭎 Telescope',
-				group = 'GruvboxYellow',
+				group = 'GruvboxOrange',
 				action = 'Telescope',
 				key = 't'
 			},
@@ -50,17 +50,17 @@ require('dashboard').setup({
 		},
 		packages = { enable = true },
 		project = { enable = false },
-		mru = { limit = 12 },
 		footer = {
 			[[]],
 			[["I think we can put our differences behind us.]],
-			[[For science. You monster." - GLaDOS]]
+			[[For science. You monster." - GLaDOS]],
+			[[]]
 		}
 	}
 })
 
 vim.api.nvim_command([[
 	augroup ChangeHeaderColor
-		autocmd colorscheme gruvbox :hi link DashboardHeader GruvboxOrange
+		autocmd colorscheme gruvbox :hi link DashboardHeader GruvboxGreen
 	augroup END
 ]])

@@ -9,14 +9,11 @@ blur enable
 blur_xray disable
 
 # Corner radius
-corner_radius 8
+corner_radius 4
 
 # Window shadows
 shadows disable
 shadows_on_csd disable
 
-# LayerShell effects
-layer_effects "waybar" blur enable; shadows disable
-
 # Treat Scratchpad as minimized
-scratchpad_minimize enable
+scratchpad_minimize disable
