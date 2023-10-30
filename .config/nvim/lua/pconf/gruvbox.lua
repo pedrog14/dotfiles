@@ -1,4 +1,2 @@
-require('gruvbox').setup({
-	transparent_mode = true
-})
+require('gruvbox').setup({})
 vim.cmd.colorscheme('gruvbox')

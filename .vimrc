@@ -34,7 +34,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -46,7 +45,6 @@ colorscheme gruvbox
 
 " GRUVBOX SETTINGS
 let g:gruvbox_italic = 1
-hi Normal guibg=NONE ctermbg=NONE
 
 " AIRLINE SETTINGS
 let g:airline_theme = 'gruvbox'

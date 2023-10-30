@@ -15,7 +15,6 @@ window#waybar {
 	color: #ebdbb2;
 	background-color: #282828;
 	border: 2px solid #504945;
-	/* border-radius: 4px; */
 }
 
 label:focus { 
@@ -25,8 +24,7 @@ label:focus {
 tooltip * { all: unset; }
 tooltip {
 	color: #ebdbb2;
-	background-color: #32302f;
-
+	background-color: #3c3836;
 	border: 1px solid #a89984;
 }
 
