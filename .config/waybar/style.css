@@ -152,8 +152,10 @@ window#waybar.solo {
 #disk,
 #temperature,
 #backlight,
+#backlight-slider,
 #network,
 #pulseaudio,
+#pulseaudio-slider,
 #wireplumber,
 #mpd,
 #language,
@@ -164,8 +166,39 @@ window#waybar.solo {
 	border-right: 2px solid #a89984;
 }
 
+#pulseaudio,
+#backlight {
+	border-right: none;
+	padding-right: .4em;
+}
+
 #backlight {
 	font-family: 'JetBrains Mono Medium', 'Font Awesome 6 Free';
+}
+
+#pulseaudio-slider,
+#backlight-slider {
+	padding-left: .4em;
+}
+
+#pulseaudio-slider slider,
+#backlight-slider slider {
+	all: unset;
+}
+
+#pulseaudio-slider trough,
+#backlight-slider trough {
+    min-height: 4px;
+    min-width: 64px;
+    border-radius: 4px;
+    background-color: #3c3836;
+}
+
+#pulseaudio-slider highlight,
+#backlight-slider highlight {
+    min-width: 0;
+    border-radius: 4px;
+    background-color: #fe8019;
 }
 
 #custom-power {

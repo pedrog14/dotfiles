@@ -4,7 +4,3 @@ exec autotiling-rs
 # Copying and Pasting
 exec wl-paste -t text --watch clipman store --no-persist
 exec wl-paste -p -t text --watch clipman store --no-persist
-
-# Wob
-set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
