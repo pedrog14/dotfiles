@@ -3,7 +3,7 @@
 ---------------------
 
 require('settings')
-require('lazy-nvim')
-require('pconf')
+require('plugins')
+require('config')
 
 vim.cmd.colorscheme('gruvbox')

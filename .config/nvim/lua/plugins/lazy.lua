@@ -3,13 +3,13 @@ return {
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
 
-	-- NVIM TREESITTER --
+	-- TREESITTER --
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
-	-- NVIM LSPCONFIG --
+	-- LSPCONFIG --
 	'neovim/nvim-lspconfig',
 
-	-- NVIM CMP --
+	-- CMP --
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-buffer',
@@ -18,7 +18,7 @@ return {
 	'lukas-reineke/cmp-under-comparator',
 
 	-- LUASNIP --
-	'L3MON4D3/LuaSnip',
+	{ 'L3MON4D3/LuaSnip', dependencies = { 'rafamadriz/friendly-snippets' } },
 	'saadparwaiz1/cmp_luasnip',
 
 	-- TELESCOPE --
@@ -26,26 +26,26 @@ return {
 	-- Extensions --
 	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
-	-- LUALINE NVIM --
+	-- LUALINE --
 	{ 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons', optional = true } },
 
 	-- INDENT BLANKLINE --
 	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl' },
 
-	-- COMMENT NVIM --
-	{ 'numToStr/Comment.nvim', opts = {}, lazy = false },
+	-- COMMENT --
+	{ 'numToStr/Comment.nvim', lazy = false },
 
-	-- NVIM TREE --
+	-- TREE --
 	{ 'nvim-tree/nvim-tree.lua', version = '*', lazy = false, dependencies = 'nvim-tree/nvim-web-devicons' },
 
 	-- COLORIZER --
 	'NvChad/nvim-colorizer.lua',
 
-	-- GRUVBOX NVIM --
+	-- GRUVBOX --
 	{ 'ellisonleao/gruvbox.nvim', priority = 1000, config = true },
 
-	-- DASHBOARD --
-	{ 'nvimdev/dashboard-nvim', event = 'VimEnter', dependencies = 'nvim-tree/nvim-web-devicons' },
+	-- ALPHA --
+	{ 'goolord/alpha-nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
 
 	-- SURROUND --
 	{ 'kylechui/nvim-surround', version = '*', event = 'VeryLazy' },
@@ -57,5 +57,8 @@ return {
 	'windwp/nvim-ts-autotag',
 
 	-- TROUBLE --
-	{ 'folke/trouble.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } }
+	{ 'folke/trouble.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+
+	-- NOICE --
+	{ 'folke/noice.nvim', event = 'VeryLazy', dependencies = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } },
 }

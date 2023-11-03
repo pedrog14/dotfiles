@@ -14,10 +14,13 @@ opt.mouse = 'a'
 opt.mousemev = true
 opt.bg = 'dark'
 opt.termguicolors = true
-opt.signcolumn = 'number'
 opt.backup = false
 opt.writebackup = false
+opt.signcolumn = 'yes'
 
 g.mapleader = ' '
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
+
+-- Changing DiagnosticSign background
+vim.api.nvim_command('autocmd colorscheme gruvbox :hi SignColumn guibg=NONE')
