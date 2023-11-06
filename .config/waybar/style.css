@@ -1,6 +1,6 @@
 * {
 	font-family: 'JetBrains Mono Medium', 'Font Awesome 6 Free', 'Symbols Nerd Font Mono';
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 
 	border: none;
@@ -45,21 +45,21 @@ button:hover {
 .modules-left,
 .modules-center,
 .modules-right {
-	padding: .25em 0;
+	padding: .3em 0;
 }
 
 /* Modules - Left */
 
 .modules-left {
-	margin-left: 2px;
+	margin-left: 3px;
 }
 
 #custom-menu {
 	margin: 1px 0;
-	padding: 0 .25em;
+	padding: 0 .3em;
 
 	font-family: 'Symbols Nerd Font Mono';
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: normal;
 }
 
@@ -141,7 +141,7 @@ window#waybar.solo {
 /* Modules - Right */
 
 .modules-right {
-	margin-right: 2px;
+	margin-right: 3px;
 }
 
 #battery,
@@ -152,10 +152,8 @@ window#waybar.solo {
 #disk,
 #temperature,
 #backlight,
-#backlight-slider,
 #network,
 #pulseaudio,
-#pulseaudio-slider,
 #wireplumber,
 #mpd,
 #language,
@@ -166,46 +164,15 @@ window#waybar.solo {
 	border-right: 2px solid #a89984;
 }
 
-#pulseaudio,
-#backlight {
-	border-right: none;
-	padding-right: .4em;
-}
-
 #backlight {
 	font-family: 'JetBrains Mono Medium', 'Font Awesome 6 Free';
 }
 
-#pulseaudio-slider,
-#backlight-slider {
-	padding-left: .4em;
-}
-
-#pulseaudio-slider slider,
-#backlight-slider slider {
-	all: unset;
-}
-
-#pulseaudio-slider trough,
-#backlight-slider trough {
-    min-height: 4px;
-    min-width: 64px;
-    border-radius: 4px;
-    background-color: #3c3836;
-}
-
-#pulseaudio-slider highlight,
-#backlight-slider highlight {
-    min-width: 0;
-    border-radius: 4px;
-    background-color: #fe8019;
-}
-
 #custom-power {
 	margin: 1px 0;
-	padding: 0 .25em;
+	padding: 0 .3em;
 	font-family: 'Symbols Nerd Font Mono';
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: normal;
 }
 

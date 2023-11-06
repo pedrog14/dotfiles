@@ -95,7 +95,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "JetBrains Mono Medium 11" -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'
+bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "JetBrains Mono Medium 12" -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'
 #
 # Moving around:
 #
@@ -166,7 +166,10 @@ bindsym $mod+f fullscreen
 
 # Toggle the current focus between tiling and floating mode
 bindsym $mod+Shift+space floating toggle
+
+# Floating windows
 for_window [title="nmtui"] floating enable
+for_window [title="galculator"] floating enable
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+space focus mode_toggle

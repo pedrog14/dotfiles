@@ -14,7 +14,7 @@ set bg=dark
 set termguicolors
 set nobackup
 set nowritebackup
-set signcolumn=number
+set signcolumn=yes
 set fileencoding=utf-8
 set foldmethod=marker
 
@@ -64,5 +64,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " CTRLP SETTINGS
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+hi SignColumn guibg=#282828
 
 set t_RV=

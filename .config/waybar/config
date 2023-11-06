@@ -8,7 +8,7 @@
 	// Choose the order of the modules
 	"modules-left": ["custom/menu", "sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window", "mpris"],
 	"modules-center": [],
-	"modules-right": ["tray", "pulseaudio", "pulseaudio/slider", "network", "cpu", "memory", "backlight", "backlight/slider", "battery", "clock", "custom/power"],
+	"modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "custom/power"],
 	// Modules configuration
 	// "sway/workspaces": {
 	//     "disable-scroll": true,
@@ -116,12 +116,6 @@
 		"format": "{percent}% {icon}",
 		"format-icons": ["", "", "", "", "", "", "", "", ""]
 	},
-	"backlight/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "horizontal",
-		"device": "intel_backlight"
-	},
 	"battery": {
 		"states": {
 			// "good": 95,
@@ -168,11 +162,6 @@
 		},
 		"on-click": "pavucontrol"
 	},
-	"pulseaudio/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "horizontal"
-	},
 	"mpris": {
 		"format": "{player_icon} {dynamic}",
 		"format-paused": "{status_icon} {dynamic}",
@@ -208,6 +197,6 @@
 	"custom/power": {
 		"format": "  ",
 		"tooltip": false,
-		"on-click": "rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono \"' -font 'JetBrains Mono Medium 11' -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'"
+		"on-click": "rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono \"' -font 'JetBrains Mono Medium 12' -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'"
 	}
 }
