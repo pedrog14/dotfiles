@@ -1,6 +1,6 @@
 * {
 	font-family: 'JetBrains Mono Medium', 'Font Awesome 6 Free', 'Symbols Nerd Font Mono';
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: bold;
 
 	border: none;
@@ -51,15 +51,15 @@ button:hover {
 /* Modules - Left */
 
 .modules-left {
-	margin-left: 3px;
+	margin-left: 2px;
 }
 
 #custom-menu {
 	margin: 1px 0;
-	padding: 0 .3em;
+	padding: 0 .25em;
 
 	font-family: 'Symbols Nerd Font Mono';
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 }
 
@@ -141,7 +141,7 @@ window#waybar.solo {
 /* Modules - Right */
 
 .modules-right {
-	margin-right: 3px;
+	margin-right: 2px;
 }
 
 #battery,
@@ -170,9 +170,9 @@ window#waybar.solo {
 
 #custom-power {
 	margin: 1px 0;
-	padding: 0 .3em;
+	padding: 0 .25em;
 	font-family: 'Symbols Nerd Font Mono';
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 }
 
