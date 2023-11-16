@@ -5,6 +5,6 @@ width=384
 height=128
 padding=8
 border-size=2
-border-color=#fe8019
+border-color=#83A598
 
 default-timeout=5000

@@ -8,10 +8,7 @@ bold_italic_font	JetBrains Mono Bold Italic
 
 font_size 13.0
 
-modify_font underline_position 2
-modify_font underline_thickness 150%
-
-background_opacity 0.87
+# background_opacity 0.87
 
 # Desativar confirmação para fechar janela
 confirm_os_window_close 0
@@ -2411,6 +2408,6 @@ mouse_hide_wait 0.0
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark
+# Solarized Dark
 include current-theme.conf
 # END_KITTY_THEME
