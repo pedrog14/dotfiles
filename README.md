@@ -6,21 +6,19 @@ My personal computer dotfiles
 
 ## Content
 
-- Vim (and Neovim) config
-- Gtk theming and config
+- Vim config
+- GTK theming and config
 - Kitty config
 - Mako config
 - qt5ct/qt6ct config
 - rofi (lbonn's wayland fork) config
-- sway/waybar config
-- wob config
+- sway/waybar/swaylock config
 
 ## Packages
 
 ### Essencials
 - [Sway](https://github.com/swaywm/sway)/[SwayFX](https://github.com/WillPower3309/swayfx)
 - [Waybar](https://github.com/Alexays/Waybar)
-- [Wob](https://github.com/francma/wob)
 - [Rofi](https://github.com/lbonn/rofi) (lbonn's wayland fork)
 - [rofimoji](https://github.com/fdw/rofimoji)
 - wl-clipboard + clipman
@@ -33,5 +31,4 @@ My personal computer dotfiles
 - Thunar + plugins + gvfs
 - Xarchiver
 - Vim
-- Neovim
 - and any other packages of your preference :)

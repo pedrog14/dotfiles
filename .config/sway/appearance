@@ -3,7 +3,7 @@ default_border pixel 2
 
 gaps inner 8
 
-font pango: JetBrains Mono Medium 9
+font pango: JetBrains Mono Medium 10
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {

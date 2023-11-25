@@ -1,6 +1,6 @@
 * {
-	font-family: 'JetBrains Mono Medium', 'Font Awesome 6 Free', 'Symbols Nerd Font Mono';
-	font-size: 11px;
+	font-family: 'Fira Code Medium', 'Font Awesome 6 Free', 'Symbols Nerd Font Mono';
+	font-size: 12px;
 	font-weight: bold;
 
 	border: none;
@@ -14,7 +14,7 @@
 window#waybar {
 	color: #ebdbb2;
 	background-color: #282828;
-	border: 2px solid #504945;
+	border-bottom: 2px solid #83A598;
 }
 
 label:focus { 
@@ -49,10 +49,6 @@ button:hover {
 }
 
 /* Modules - Left */
-
-.modules-left {
-	margin-left: 2px;
-}
 
 #custom-menu {
 	margin: 1px 0;
@@ -140,10 +136,6 @@ window#waybar.solo {
 
 /* Modules - Right */
 
-.modules-right {
-	margin-right: 2px;
-}
-
 #battery,
 #cpu,
 #clock,
@@ -165,7 +157,7 @@ window#waybar.solo {
 }
 
 #backlight {
-	font-family: 'JetBrains Mono Medium', 'Font Awesome 6 Free';
+	font-family: 'Fira Code Medium', 'Font Awesome 6 Free';
 }
 
 #custom-power {
