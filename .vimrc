@@ -1,5 +1,5 @@
 
-" 󰒓 VIM SETTINGS "
+" 󰒓 Vim settings "
 
 syntax on
 
@@ -34,11 +34,9 @@ set cursorlineopt=line
 
 set scrolloff=4
 
-set colorcolumn=80
-
 set t_RV=
 
-" PLUGINS
+" Plugins
 call plug#begin()
 
 Plug 'gruvbox-community/gruvbox'
@@ -63,26 +61,27 @@ call plug#end()
 
 colorscheme gruvbox
 
-" GRUVBOX SETTINGS
+" Gruvbox
 let g:gruvbox_italic = 1
 
-" AIRLINE SETTINGS
+" Airline
 let g:airline_theme = 'gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = [ 'ale', 'ctrlp', 'fzf', 'ycm', 'tabline', 'hunks' ]
 
-" NERDTREE SETTINGS
+" NERDTree
 let g:NERDTreeShowHidden = 1
 
-" CTRLP SETTINGS
+" CTRLP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" INDENTLINE SETTINGS
+" IndentLine
 let g:indentLine_char = '│'
 
 hi! link SignColumn GruvboxBg0
 
+" Functions
 function! SmartNERDTree()                   
     if g:NERDTree.IsOpen() || @% == ''
         NERDTreeToggle                      
@@ -91,7 +90,15 @@ function! SmartNERDTree()
     endif                                   
 endfunction
 
-" Keymaps "
+function! ToggleColorColumn()
+    if &colorcolumn == 80
+        set colorcolumn&
+    else
+        set colorcolumn=80
+    endif
+endfunction
+
+" 󰌌 Keymaps "
 
 " General
 nnoremap <C-d> <C-d>zz
@@ -109,6 +116,8 @@ tnoremap <C-l> <C-w>l
 
 nnoremap <S-h> :bprev<CR>
 nnoremap <S-l> :bnext<CR>
+
+nnoremap <silent> <leader>cc :call ToggleColorColumn()<CR>
 
 " NERDTree
 nnoremap <silent> <leader>n :call SmartNERDTree()<CR>
