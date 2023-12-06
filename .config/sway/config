@@ -59,18 +59,16 @@ before-sleep 'swaylock -f -c 000000'
 # Read `man 5 sway-input` for more information about this section.
 
 input type:keyboard {
-	xkb_layout us
-    xkb_variant intl
-    xkb_numlock enabled
+    xkb_layout br
 }
 
 input type:pointer {
-	accel_profile flat
+    accel_profile flat
 }
 
 input type:touchpad {
-	natural_scroll enabled
-	tap enabled
+    natural_scroll enabled
+    tap enabled
 }
 
 ### Key bindings
@@ -97,7 +95,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "Fira Code Medium 12" -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'
+bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "Fira Code Medium 12" -theme-str 'window {width: 12em;} listview {lines: 6;}'
 #
 # Moving around:
 #
@@ -220,10 +218,10 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-	swaybar_command waybar
+    swaybar_command waybar
 }
 
 include config.d/*
 include autostart
-include appearance
+include appearance/*
 include bindings

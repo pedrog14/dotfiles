@@ -1,0 +1,119 @@
+{
+    "name": "Adwaita Dark Gruvbox",
+    "variables": {
+        "accent_color": "#83a598",
+        "accent_bg_color": "#458588",
+        "accent_fg_color": "#fbf1c7",
+        "destructive_color": "#fb4934",
+        "destructive_bg_color": "#cc241d",
+        "destructive_fg_color": "#fbf1c7",
+        "success_color": "#8ec07c",
+        "success_bg_color": "#689d6a",
+        "success_fg_color": "#fbf1c7",
+        "warning_color": "#fabd2f",
+        "warning_bg_color": "#d79921",
+        "warning_fg_color": "rgba(40, 40, 40, 0.8)",
+        "error_color": "#fb4934",
+        "error_bg_color": "#cc241d",
+        "error_fg_color": "#fbf1c7",
+        "window_bg_color": "#282828",
+        "window_fg_color": "#fbf1c7",
+        "view_bg_color": "#282828",
+        "view_fg_color": "#fbf1c7",
+        "headerbar_bg_color": "#3c3836",
+        "headerbar_fg_color": "#fbf1c7",
+        "headerbar_border_color": "#fbf1c7",
+        "headerbar_backdrop_color": "@window_bg_color",
+        "headerbar_shade_color": "rgba(40, 40, 40, 0.36)",
+        "card_bg_color": "rgba(251, 241, 199, 0.08)",
+        "card_fg_color": "#fbf1c7",
+        "card_shade_color": "rgba(40, 40, 40, 0.36)",
+        "dialog_bg_color": "#3c3836",
+        "dialog_fg_color": "#fbf1c7",
+        "popover_bg_color": "#3c3836",
+        "popover_fg_color": "#fbf1c7",
+        "shade_color": "rgba(40, 40, 40, 0.36)",
+        "scrollbar_outline_color": "rgba(40, 40, 40, 0.5)",
+        "popover_shade_color": "rgba(40,40,40, 0.36)",
+        "thumbnail_bg_color": "#3c3836",
+        "secondary_sidebar_backdrop_color": "#282828",
+        "sidebar_bg_color": "#3c3836",
+        "sidebar_fg_color": "#fbf1c7",
+        "sidebar_backdrop_color": "#282828",
+        "sidebar_shade_color": "rgba(40,40,40, 0.36)",
+        "secondary_sidebar_bg_color": "#3c3836",
+        "secondary_sidebar_shade_color": "rgba(40, 40, 40, 0.36)",
+        "secondary_sidebar_fg_color": "rgba(40,40,40, 0.8)",
+        "thumbnail_fg_color": "rgba(40,40,40, 0.8)"
+    },
+    "palette": {
+        "blue_": {
+            "1": "rgb(131,165,152)",
+            "2": "rgb(116,157,148)",
+            "3": "rgb(100,149,144)",
+            "4": "rgb(85,141,140)",
+            "5": "rgb(69,133,136)"
+        },
+        "green_": {
+            "1": "rgb(142,192,124)",
+            "2": "rgb(133,184,120)",
+            "3": "rgb(123,175,115)",
+            "4": "rgb(114,166,111)",
+            "5": "rgb(104,157,106)"
+        },
+        "yellow_": {
+            "1": "rgb(250,189,47)",
+            "2": "rgb(241,180,44)",
+            "3": "rgb(232,171,40)",
+            "4": "rgb(224,162,37)",
+            "5": "rgb(215,153,33)"
+        },
+        "orange_": {
+            "1": "rgb(254,128,25)",
+            "2": "rgb(244,119,22)",
+            "3": "rgb(234,110,19)",
+            "4": "rgb(224,102,17)",
+            "5": "rgb(214,93,14)"
+        },
+        "red_": {
+            "1": "rgb(251,73,52)",
+            "2": "rgb(239,64,46)",
+            "3": "rgb(227,55,40)",
+            "4": "rgb(216,46,35)",
+            "5": "rgb(204,36,29)"
+        },
+        "purple_": {
+            "1": "rgb(211,134,155)",
+            "2": "rgb(203,125,150)",
+            "3": "rgb(194,116,145)",
+            "4": "rgb(186,107,140)",
+            "5": "rgb(177,98,134)"
+        },
+        "brown_": {
+            "1": "rgb(205,171,143)",
+            "2": "rgb(181,131,90)",
+            "3": "rgb(152,106,68)",
+            "4": "rgb(134,94,60)",
+            "5": "rgb(99,69,44)"
+        },
+        "light_": {
+            "1": "rgb(251,241,199)",
+            "2": "rgb(235,219,178)",
+            "3": "rgb(213,196,161)",
+            "4": "rgb(189,174,147)",
+            "5": "rgb(168,153,132)"
+        },
+        "dark_": {
+            "1": "rgb(124,111,100)",
+            "2": "rgb(102,92,84)",
+            "3": "rgb(80,73,69)",
+            "4": "rgb(60,56,54)",
+            "5": "rgb(40,40,40)"
+        }
+    },
+    "custom_css": {
+        "gtk4": "\n.navigation-sidebar {\n\tbackground-color: #282828;\n}\n\n/** Some apps use titlebar class and some window */\n.titlebar,\nwindow {\n\tborder-radius: 0;\n\tbox-shadow: none;\n}\n\n/** also remove shadows */\ndecoration {\n\tbox-shadow: none;\n}\n\ndecoration:backdrop {\n\tbox-shadow: none;\n}\n\ntooltip * {all: unset;}\ntooltip {\n\tcolor: #ebdbb2;\n\tbackground-color: rgba(60, 56, 54, 0.87);\n\tborder: 1px solid #a89984;\n\ttext-shadow: none;\n\tbox-shadow: none;\n\tborder-radius: 0;\n}\n",
+        "gtk3": ""
+    },
+    "plugins": {}
+}

@@ -1,0 +1,12 @@
+### Appearance - Color 
+
+include colorschemes/*
+
+# target                 title   bg      text   indicator  border
+client.background                $bg0
+client.focused           $blue0  $blue1  $fg1   $blue0     $blue1
+client.focused_inactive  $bg1    $bg2    $fg1   $bg1       $bg2
+client.focused_tab_title $bg1    $bg2    $fg1
+client.unfocused         $bg0    $bg1    $gray  $bg0       $bg1
+client.urgent            $red0   $red1   $fg1   $red0      $red1
+client.placeholder       $bg1    $bg2    $fg1   $bg1       $bg2

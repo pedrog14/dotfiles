@@ -97,7 +97,7 @@ https://github.com/GradienceTeam/Gradience
 @define-color dark_5 rgb(40,40,40);
 
 .navigation-sidebar {
-	background-color: #282828;
+background-color: #282828;
 }
 
 /** Some apps use titlebar class and some window */

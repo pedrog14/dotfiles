@@ -197,6 +197,6 @@
 	"custom/power": {
 		"format": "  ",
 		"tooltip": false,
-		"on-click": "rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono \"' -font 'Fira Code Medium 12' -theme gruvbox-dark -theme-str 'window {width: 12em;} listview {lines: 6;}'"
+		"on-click": "rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono \"' -font 'Fira Code Medium 12' -theme-str 'window {width: 12em;} listview {lines: 6;}'"
 	}
 }

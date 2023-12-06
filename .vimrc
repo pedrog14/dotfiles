@@ -39,7 +39,7 @@ set t_RV=
 " Plugins
 call plug#begin()
 
-Plug 'gruvbox-community/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
