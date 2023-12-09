@@ -1,7 +1,7 @@
 ### Appearance customization
 default_border pixel 2
 
-gaps inner 8
+gaps inner 6
 
 font pango: Fira Code 10
 
