@@ -47,13 +47,13 @@ button:hover {
 .modules-left,
 .modules-center,
 .modules-right {
-	padding: .3em 0;
+	padding: .2em 0;
 }
 
 /* Modules - Left */
 
 #custom-menu {
-	margin: 1px 0;
+	margin: 4px 0;
 	padding: 0 .25em;
 
 	font-family: 'Symbols Nerd Font Mono';
@@ -163,7 +163,7 @@ window#waybar.solo {
 }
 
 #custom-power {
-	margin: 1px 0;
+	margin: 4px 0;
 	padding: 0 .25em;
 	font-family: 'Symbols Nerd Font Mono';
 	font-size: 14px;
