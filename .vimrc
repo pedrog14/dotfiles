@@ -34,12 +34,16 @@ set cursorlineopt=line
 
 set scrolloff=4
 
+set noshowmode
+
+set updatetime=200
+
 set t_RV=
 
 " Plugins
 call plug#begin()
 
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -59,15 +63,26 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
-colorscheme gruvbox
-
-" Gruvbox
+""" Gruvbox settings
 let g:gruvbox_italic = 1
 
+" Colorscheme adjustments
+augroup set_transparency
+    au!
+    au ColorScheme * hi! Normal guibg=NONE ctermbg=NONE
+    au ColorScheme * hi! VertSplit guibg=NONE ctermbg=NONE
+    au ColorScheme * hi! link SignColumn Normal
+
+    au ColorScheme gruvbox hi! link GitGutterAdd    GruvboxGreen
+    au ColorScheme gruvbox hi! link GitGutterChange GruvboxAqua
+    au ColorScheme gruvbox hi! link GitGutterDelete GruvboxRed
+augroup END
+
+colorscheme gruvbox
+
 " Airline
-let g:airline_theme = 'gruvbox'
 let g:airline_powerline_fonts = 1
-let g:airline_extensions = [ 'ale', 'ctrlp', 'fzf', 'ycm', 'tabline', 'hunks' ]
+let g:airline_extensions = [ 'ale', 'ctrlp', 'fzf', 'tabline', 'hunks' ]
 
 " NERDTree
 let g:NERDTreeShowHidden = 1
@@ -79,22 +94,12 @@ let g:ctrlp_cmd = 'CtrlP'
 " IndentLine
 let g:indentLine_char = '│'
 
-hi! link SignColumn GruvboxBg0
-
 " Functions
-function! SmartNERDTree()                   
+function! SmartNERDTree()
     if g:NERDTree.IsOpen() || @% == ''
-        NERDTreeToggle                      
+        NERDTreeToggle
     else
-        NERDTreeFind                        
-    endif                                   
-endfunction
-
-function! ToggleColorColumn()
-    if &colorcolumn == 80
-        set colorcolumn&
-    else
-        set colorcolumn=80
+        NERDTreeFind
     endif
 endfunction
 
@@ -114,10 +119,10 @@ tnoremap <C-j> <C-w>j
 tnoremap <C-k> <C-w>k
 tnoremap <C-l> <C-w>l
 
-nnoremap <S-h> :bprev<CR>
-nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> <Cmd>bprev<CR>
+nnoremap <S-l> <Cmd>bnext<CR>
 
-nnoremap <silent> <leader>cc :call ToggleColorColumn()<CR>
+nnoremap <silent> <A-c> <Cmd>let &cc = &cc == '' ? '80' : ''<CR>
 
 " NERDTree
 nnoremap <silent> <leader>n :call SmartNERDTree()<CR>

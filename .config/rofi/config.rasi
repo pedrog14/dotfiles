@@ -153,6 +153,5 @@ configuration {
         sorting-method:    "name";
     }
 }
-//@theme "~/.config/rofi/catppuccin-mocha.rasi"
 
 @theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

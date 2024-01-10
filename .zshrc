@@ -73,11 +73,11 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 plugins=(
 	git
 	fzf
-	zsh-completions
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	zsh-history-substring-search
+    archlinux
 )
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 source $ZSH/oh-my-zsh.sh
 
