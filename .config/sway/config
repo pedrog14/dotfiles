@@ -95,7 +95,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu --symbols-font "Symbols Nerd Font Mono"' -font "Fira Code Medium 12" -theme-str 'window {width: 12em;} listview {lines: 6;}'
+bindsym $mod+Shift+e exec rofi -show p -modi p:'rofi-power-menu' -font "Fira Code Nerd Font Medium 12" -theme-str 'window {width: 12em;} listview {lines: 6;}'
 #
 # Moving around:
 #

@@ -1,127 +1,121 @@
-@import 'gruvbox-dark.css';
+@import "gruvbox-dark.css";
 
 * {
-	font-family: 'Fira Code', 'Font Awesome 6 Free', 'Symbols Nerd Font Mono';
-	font-size: 12px;
-	font-weight: bold;
-
-	border: none;
-	border-radius: 0;
-
-	box-shadow: none;
-	text-shadow: none;
-	transition-duration: 0s;
+    font-family: "Fira Code", "Font Awesome 6 Free", "Symbols Nerd Font";
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    transition-duration: 0s;
 }
 
 window#waybar {
-	color: @fg1;
-	background-color: @bg0_s;
-	border-bottom: 2px solid @blue1;
+    color: @light1;
+    background-color: @dark0_s;
+    border-bottom: 2px solid @brightblue;
 }
 
 label:focus { 
-	background-color: #000000;
+    background-color: #000000;
 }
 
 tooltip * { all: unset; }
 tooltip {
-	color: @fg1;
-	background-color: @bg1;
-	border: 1px solid @fg4;
+    color: @light1;
+    background-color: @dark1;
+    border: 1px solid @light4;
 }
 
 button {
-	/* Use box-shadow instead of border so the text isn't offset */
-	/*box-shadow: inset 0 -2px transparent;*/
-	/* Avoid rounded borders under each button name */
-	all: unset;
-	border: none;
+    /* Use box-shadow instead of border so the text isn"t offset */
+    /*box-shadow: inset 0 -2px transparent;*/
+    /* Avoid rounded borders under each button name */
+    all: unset;
+    border: none;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-	background: inherit;
-	/*box-shadow: inset 0 -2px rgba(175, 58, 3, 0.87);*/
+    background: inherit;
+    /*box-shadow: inset 0 -2px rgba(175, 58, 3, 0.87);*/
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-	padding: .2em 0;
+    padding: .2em 0;
 }
 
 /* Modules - Left */
 
 #custom-menu {
-	margin: 4px 0;
-	padding: 0 .25em;
-
-	font-family: 'Symbols Nerd Font Mono';
-	font-size: 14px;
-	font-weight: normal;
+    margin: 4px 0;
+    padding: 0 .25em;
+    font-family: "Symbols Nerd Font";
+    font-size: 14px;
+    font-weight: normal;
 }
 
 #workspaces {
-	margin: 4px 0;
-	padding: 0 .8em;
-	border-left: 2px solid @fg4;
-
-	background-color: transparent;
+    margin: 4px 0;
+    padding: 0 .8em;
+    border-left: 2px solid @light4;
+    background-color: transparent;
 }
 
 #workspaces button {
-	padding: 0 .425em;
-
-	color: @fg1;
-	background-color: @bg2;
-
-	border-top: 1px solid @fg4;
-	border-bottom: 1px solid @fg4;
-	border-radius: 0;
+    padding: 0 .425em;
+    color: @light1;
+    background-color: @dark2;
+    border-top: 1px solid @light4;
+    border-bottom: 1px solid @light4;
+    border-radius: 0;
 }
 
 #workspaces button:first-child {
-	border-left: 1px solid @fg4;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+    border-left: 1px solid @light4;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 #workspaces button:last-child {
-	border-right: 1px solid @fg4;
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
+    border-right: 1px solid @light4;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 #workspaces button:hover {
-	color: @orange1;
+    color: @brightorange;
 }
 
 #workspaces button.focused {
-	background-color: @bg3;
+    background-color: @dark3;
 }
 
 #workspaces button.urgent {
-	color: @red1;
+    color: @brightred;
 }
 
 #scratchpad.empty {
-	all: unset;
+    all: unset;
 }
 
 window#waybar.empty #window {
-	all: unset;
+    all: unset;
 }
 
 window#waybar.hidden {
-	opacity: 0.2;
+    opacity: 0.2;
 }
 
 /*
 window#waybar.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 window#waybar.solo {
-	background-color: #FFFFFF;
+    background-color: #FFFFFF;
 }
 */
 
@@ -129,9 +123,9 @@ window#waybar.solo {
 #scratchpad,
 #window,
 #mpris {
-	margin: 4px 0;
-	padding: 0 .8em;
-	border-left: 2px solid @fg4;
+    margin: 4px 0;
+    padding: 0 .8em;
+    border-left: 2px solid @light4;
 }
 
 /* Modules - Center */
@@ -153,48 +147,44 @@ window#waybar.solo {
 #language,
 #keyboard-state,
 #tray {
-	margin: 4px 0;
-	padding: 0 .8em;
-	border-right: 2px solid @fg4;
-}
-
-#backlight {
-	font-family: 'Fira Code Medium', 'Font Awesome 6 Free';
+    margin: 4px 0;
+    padding: 0 .8em;
+    border-right: 2px solid @light4;
 }
 
 #custom-power {
-	margin: 4px 0;
-	padding: 0 .25em;
-	font-family: 'Symbols Nerd Font Mono';
-	font-size: 14px;
-	font-weight: normal;
+    margin: 4px 0;
+    padding: 0 .25em;
+    font-family: "Symbols Nerd Font Mono";
+    font-size: 14px;
+    font-weight: normal;
 }
 
 /*#tray menu {
-	padding: 2px .4em;
-	background-color: rgba(60, 56, 54, 0.87);
-	border: 2px solid rgba(40, 40, 40, 0.87);
-	border-radius: 4px;
-	color: @fg1;
+    padding: 2px .4em;
+    background-color: rgba(60, 56, 54, 0.87);
+    border: 2px solid rgba(40, 40, 40, 0.87);
+    border-radius: 4px;
+    color: @light1;
 }*/
 
 #tray * {
-	box-shadow: none;
+    box-shadow: none;
 }
 
 #tray menu .focused {
-	background-color: #FFFFFF;
+    background-color: #FFFFFF;
 }
 
 #tray > .passive {
-	-gtk-icon-effect: dim;
+    -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-	-gtk-icon-effect: highlight;
-	background-color: @red1;
+    -gtk-icon-effect: highlight;
+    background-color: @brightred;
 }
 
 #custom-media {
-	min-width: 100px;
+    min-width: 100px;
 }
