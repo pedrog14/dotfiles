@@ -1,9 +1,9 @@
-# Environment Variables
 export EDITOR=nvim
 export VISUAL=nvim
 export QT_QPA_PLATFORMTHEME=qt6ct
 
-typeset -U path PATH
-path=(~/.local/bin $path)
-path=(~/.local/share/bob/nvim-bin $path)
+PATH="$HOME/.local/bin":"$HOME/.local/share/bob/nvim-bin":"$HOME/Git/cmus/bin":$PATH
 export PATH
+
+CPATH="$HOME/.local/include":$CPATH
+export CPATH
