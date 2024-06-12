@@ -1,5 +1,5 @@
 configuration {
-    font: "Fira Code Nerd Font Medium 12";
+    font: "Fira Code Medium 12";
     terminal: "xdg-terminal-exec";
     cycle: false;
 /*  modes: "window,drun,run,ssh";*/
@@ -153,5 +153,7 @@ configuration {
         sorting-method:    "name";
     }
 }
+
+//@theme "gruvbox-dark-round.rasi"
 
 @theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

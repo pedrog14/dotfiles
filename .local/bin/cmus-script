@@ -1,0 +1,49 @@
+#! /usr/bin/env python
+
+import subprocess
+import json
+from time import sleep
+from datetime import timedelta
+
+cmd = ["cmus-remote", "-C", "status"]
+aux = []
+once = True
+
+while True:
+    subP = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                            stderr=subprocess.STDOUT)
+    out = subP.stdout.readlines()
+    if out == aux:
+        if once and aux == []:
+            print(flush=True)
+            once = False
+        sleep(0.1)
+        continue
+    else:
+        once = True
+        info = {}
+
+        for i in out:
+            line = i.decode("utf-8").strip("\n").split(" ")
+
+            if line[0] == "status":
+                if line[1] == "stopped":
+                    break
+                info[line[0]] = "" if line[1] == "playing" else ""
+                continue
+
+            if line[0] in ("duration", "position"):
+                info[line[0]] = timedelta(seconds=int(line[1]))
+                continue
+
+            if line[0] == "tag":
+                info[line[1]] = " ".join(line[2:])
+                continue
+
+        if info != {}:
+            text = f"{info["status"]} {info["title"]} - {info["album"]
+                                                         } - {info["artist"]} [{info["position"]}/{info["duration"]}]"
+            print(json.dumps({"text": text, "tooltip": text}), flush=True)
+
+        aux = out
+        sleep(0.1)

@@ -1,7 +1,6 @@
-
 " 󰒓 Vim settings "
 
-syntax on asdjaskdj
+syntax on
 
 let mapleader=' '
 
@@ -33,7 +32,6 @@ set cursorline
 set cursorlineopt=line
 
 set scrolloff=4
-
 set noshowmode
 
 set updatetime=200
@@ -51,7 +49,6 @@ Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
@@ -119,8 +116,8 @@ tnoremap <C-j> <C-w>j
 tnoremap <C-k> <C-w>k
 tnoremap <C-l> <C-w>l
 
-nnoremap <S-h> <Cmd>bprev<CR>
-nnoremap <S-l> <Cmd>bnext<CR>
+nnoremap <A-h> <Cmd>bprev<CR>
+nnoremap <A-l> <Cmd>bnext<CR>
 
 nnoremap <silent> <A-c> <Cmd>let &cc = &cc == '' ? '80' : ''<CR>
 

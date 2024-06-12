@@ -39,89 +39,92 @@ https://github.com/GradienceTeam/Gradience
 @define-color popover_fg_color #fbf1c7;
 @define-color shade_color rgba(40, 40, 40, 0.36);
 @define-color scrollbar_outline_color rgba(40, 40, 40, 0.5);
-@define-color popover_shade_color rgba(40,40,40, 0.36);
+@define-color popover_shade_color rgba(40, 40, 40, 0.36);
 @define-color thumbnail_bg_color #3c3836;
 @define-color secondary_sidebar_backdrop_color #282828;
 @define-color sidebar_bg_color #3c3836;
 @define-color sidebar_fg_color #fbf1c7;
 @define-color sidebar_backdrop_color #282828;
-@define-color sidebar_shade_color rgba(40,40,40, 0.36);
+@define-color sidebar_shade_color rgba(40, 40, 40, 0.36);
 @define-color secondary_sidebar_bg_color #3c3836;
 @define-color secondary_sidebar_shade_color rgba(40, 40, 40, 0.36);
-@define-color secondary_sidebar_fg_color rgba(40,40,40, 0.8);
-@define-color thumbnail_fg_color rgba(40,40,40, 0.8);
-@define-color blue_1 rgb(131,165,152);
-@define-color blue_2 rgb(116,157,148);
-@define-color blue_3 rgb(100,149,144);
-@define-color blue_4 rgb(85,141,140);
-@define-color blue_5 rgb(69,133,136);
-@define-color green_1 rgb(142,192,124);
-@define-color green_2 rgb(133,184,120);
-@define-color green_3 rgb(123,175,115);
-@define-color green_4 rgb(114,166,111);
-@define-color green_5 rgb(104,157,106);
-@define-color yellow_1 rgb(250,189,47);
-@define-color yellow_2 rgb(241,180,44);
-@define-color yellow_3 rgb(232,171,40);
-@define-color yellow_4 rgb(224,162,37);
-@define-color yellow_5 rgb(215,153,33);
-@define-color orange_1 rgb(254,128,25);
-@define-color orange_2 rgb(244,119,22);
-@define-color orange_3 rgb(234,110,19);
-@define-color orange_4 rgb(224,102,17);
-@define-color orange_5 rgb(214,93,14);
-@define-color red_1 rgb(251,73,52);
-@define-color red_2 rgb(239,64,46);
-@define-color red_3 rgb(227,55,40);
-@define-color red_4 rgb(216,46,35);
-@define-color red_5 rgb(204,36,29);
-@define-color purple_1 rgb(211,134,155);
-@define-color purple_2 rgb(203,125,150);
-@define-color purple_3 rgb(194,116,145);
-@define-color purple_4 rgb(186,107,140);
-@define-color purple_5 rgb(177,98,134);
-@define-color brown_1 rgb(205,171,143);
-@define-color brown_2 rgb(181,131,90);
-@define-color brown_3 rgb(152,106,68);
-@define-color brown_4 rgb(134,94,60);
-@define-color brown_5 rgb(99,69,44);
-@define-color light_1 rgb(251,241,199);
-@define-color light_2 rgb(235,219,178);
-@define-color light_3 rgb(213,196,161);
-@define-color light_4 rgb(189,174,147);
-@define-color light_5 rgb(168,153,132);
-@define-color dark_1 rgb(124,111,100);
-@define-color dark_2 rgb(102,92,84);
-@define-color dark_3 rgb(80,73,69);
-@define-color dark_4 rgb(60,56,54);
-@define-color dark_5 rgb(40,40,40);
+@define-color secondary_sidebar_fg_color rgba(40, 40, 40, 0.8);
+@define-color thumbnail_fg_color rgba(40, 40, 40, 0.8);
+@define-color blue_1 rgb(131, 165, 152);
+@define-color blue_2 rgb(116, 157, 148);
+@define-color blue_3 rgb(100, 149, 144);
+@define-color blue_4 rgb(85, 141, 140);
+@define-color blue_5 rgb(69, 133, 136);
+@define-color green_1 rgb(142, 192, 124);
+@define-color green_2 rgb(133, 184, 120);
+@define-color green_3 rgb(123, 175, 115);
+@define-color green_4 rgb(114, 166, 111);
+@define-color green_5 rgb(104, 157, 106);
+@define-color yellow_1 rgb(250, 189, 47);
+@define-color yellow_2 rgb(241, 180, 44);
+@define-color yellow_3 rgb(232, 171, 40);
+@define-color yellow_4 rgb(224, 162, 37);
+@define-color yellow_5 rgb(215, 153, 33);
+@define-color orange_1 rgb(254, 128, 25);
+@define-color orange_2 rgb(244, 119, 22);
+@define-color orange_3 rgb(234, 110, 19);
+@define-color orange_4 rgb(224, 102, 17);
+@define-color orange_5 rgb(214, 93, 14);
+@define-color red_1 rgb(251, 73, 52);
+@define-color red_2 rgb(239, 64, 46);
+@define-color red_3 rgb(227, 55, 40);
+@define-color red_4 rgb(216, 46, 35);
+@define-color red_5 rgb(204, 36, 29);
+@define-color purple_1 rgb(211, 134, 155);
+@define-color purple_2 rgb(203, 125, 150);
+@define-color purple_3 rgb(194, 116, 145);
+@define-color purple_4 rgb(186, 107, 140);
+@define-color purple_5 rgb(177, 98, 134);
+@define-color brown_1 rgb(205, 171, 143);
+@define-color brown_2 rgb(181, 131, 90);
+@define-color brown_3 rgb(152, 106, 68);
+@define-color brown_4 rgb(134, 94, 60);
+@define-color brown_5 rgb(99, 69, 44);
+@define-color light_1 rgb(251, 241, 199);
+@define-color light_2 rgb(235, 219, 178);
+@define-color light_3 rgb(213, 196, 161);
+@define-color light_4 rgb(189, 174, 147);
+@define-color light_5 rgb(168, 153, 132);
+@define-color dark_1 rgb(124, 111, 100);
+@define-color dark_2 rgb(102, 92, 84);
+@define-color dark_3 rgb(80, 73, 69);
+@define-color dark_4 rgb(60, 56, 54);
+@define-color dark_5 rgb(40, 40, 40);
 
 .navigation-sidebar {
-	background-color: #282828;
+  background-color: #282828;
 }
 
 /** Some apps use titlebar class and some window */
 .titlebar,
 window {
-	border-radius: 0;
-	box-shadow: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /** also remove shadows */
 decoration {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 decoration:backdrop {
-	box-shadow: none;
+  box-shadow: none;
 }
 
-tooltip * {all: unset;}
+tooltip * {
+  all: unset;
+}
+
 tooltip {
-	color: #ebdbb2;
-	background-color: rgba(60, 56, 54, 0.87);
-	border: 1px solid #a89984;
-	text-shadow: none;
-	box-shadow: none;
-	border-radius: 0;
+  color: #ebdbb2;
+  background: #282828;
+  border: 1px solid #ebdbb2;
+  /* text-shadow: none; */
+  /* box-shadow: none; */
+  border-radius: 4px;
 }

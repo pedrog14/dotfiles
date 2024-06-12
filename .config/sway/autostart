@@ -1,5 +1,6 @@
 ### Autostart
 exec autotiling-rs
+exec mako
 
 # Copying and Pasting
 exec wl-paste -t text --watch clipman store --no-persist

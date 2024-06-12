@@ -1,190 +1,134 @@
 @import "gruvbox-dark.css";
 
 * {
-    font-family: "Fira Code", "Font Awesome 6 Free", "Symbols Nerd Font";
-    font-size: 12px;
+    font-family: "Fira Code", "Font Awesome 6 Free", "Symbols Nerd Font Mono";
     font-weight: bold;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    text-shadow: none;
-    transition-duration: 0s;
+    font-size: 12px;
+
+    min-width: 0;
+    min-height: 0;
 }
 
 window#waybar {
+    background: unset;
     color: @light1;
-    background-color: @dark0_s;
-    border-bottom: 2px solid @brightblue;
 }
 
-label:focus { 
-    background-color: #000000;
-}
-
-tooltip * { all: unset; }
 tooltip {
+    background: @dark0;
     color: @light1;
-    background-color: @dark1;
-    border: 1px solid @light4;
+    border: 1px solid @light1;
+    border-radius: 4px;
+    box-shadow: unset;
+    text-shadow: unset;
 }
 
-button {
-    /* Use box-shadow instead of border so the text isn"t offset */
-    /*box-shadow: inset 0 -2px transparent;*/
-    /* Avoid rounded borders under each button name */
-    all: unset;
-    border: none;
+.modules-left {
+    margin-left: 4px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    /*box-shadow: inset 0 -2px rgba(175, 58, 3, 0.87);*/
-}
-
-.modules-left,
-.modules-center,
 .modules-right {
-    padding: .2em 0;
+    margin-right: 4px;
 }
 
-/* Modules - Left */
+#custom-menu,
+#workspaces,
+#mode,
+#scratchpad,
+#custom-cmus,
+#window,
+#tray,
+#idle_inhibitor,
+#wireplumber,
+#backlight,
+#battery,
+#clock,
+#custom-power {
+    margin: 6px 2px;
+    padding: 0 0.45em;
+    background: @dark1;
+    border-radius: 4px;
+}
 
 #custom-menu {
-    margin: 4px 0;
-    padding: 0 .25em;
-    font-family: "Symbols Nerd Font";
-    font-size: 14px;
-    font-weight: normal;
+    padding: 0 0.7em 0 0.4em;
+    font-family: "Symbols Nerd Font Mono";
 }
 
 #workspaces {
-    margin: 4px 0;
-    padding: 0 .8em;
-    border-left: 2px solid @light4;
-    background-color: transparent;
+    background: transparent;
+    padding: unset;
 }
 
 #workspaces button {
-    padding: 0 .425em;
-    color: @light1;
-    background-color: @dark2;
-    border-top: 1px solid @light4;
-    border-bottom: 1px solid @light4;
-    border-radius: 0;
+    /* margin: 4px 0; */
+    background: @dark1;
+    border-radius: unset;
+    padding: 0 0.4em;
+}
+
+#workspaces button.focused {
+    background: @dark2;
+}
+
+#workspaces button.urgent {
+    color: @bright_red;
 }
 
 #workspaces button:first-child {
-    border-left: 1px solid @light4;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
 #workspaces button:last-child {
-    border-right: 1px solid @light4;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-
-#workspaces button:hover {
-    color: @brightorange;
-}
-
-#workspaces button.focused {
-    background-color: @dark3;
-}
-
-#workspaces button.urgent {
-    color: @brightred;
-}
-
-#scratchpad.empty {
-    all: unset;
 }
 
 window#waybar.empty #window {
     all: unset;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-#mode,
-#scratchpad,
-#window,
-#mpris {
-    margin: 4px 0;
-    padding: 0 .8em;
-    border-left: 2px solid @light4;
-}
-
-/* Modules - Center */
-
-/* Modules - Right */
-
-#battery,
-#cpu,
-#clock,
-#idle_inhibitor,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#mpd,
-#language,
-#keyboard-state,
-#tray {
-    margin: 4px 0;
-    padding: 0 .8em;
-    border-right: 2px solid @light4;
+#tray menu {
+    background: @dark0;
 }
 
 #custom-power {
-    margin: 4px 0;
-    padding: 0 .25em;
-    font-family: "Symbols Nerd Font Mono";
-    font-size: 14px;
-    font-weight: normal;
+    padding: 0 0.525em 0 0.425em;
 }
 
-/*#tray menu {
-    padding: 2px .4em;
-    background-color: rgba(60, 56, 54, 0.87);
-    border: 2px solid rgba(40, 40, 40, 0.87);
-    border-radius: 4px;
-    color: @light1;
-}*/
-
-#tray * {
-    box-shadow: none;
+#custom-menu:hover {
+    color: @bright_orange;
 }
 
-#tray menu .focused {
-    background-color: #FFFFFF;
+#workspaces button:hover {
+    box-shadow: unset;
+    text-shadow: unset;
+    transition: unset;
+
+    color: @bright_orange;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
+#window:hover {
+    color: @bright_orange;
 }
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @brightred;
+#custom-cmus:hover {
+    color: @bright_orange;
 }
 
-#custom-media {
-    min-width: 100px;
+#idle_inhibitor:hover {
+    color: @bright_orange;
+}
+
+#network:hover {
+    color: @bright_orange;
+}
+
+#clock:hover {
+    color: @bright_orange;
+}
+
+#custom-power:hover {
+    color: @bright_orange;
 }

@@ -1,12 +1,12 @@
 ### Appearance - Color 
 
-include colorschemes/*
+include colorschemes/gruvbox-dark
 
-# target                 title   bg      text   indicator  border
-client.background                $bg0
-client.focused           $blue0  $blue1  $fg1   $blue0     $blue1
-client.focused_inactive  $bg1    $bg2    $fg1   $bg1       $bg2
-client.focused_tab_title $bg1    $bg2    $fg1
-client.unfocused         $bg0    $bg1    $gray  $bg0       $bg1
-client.urgent            $red0   $red1   $fg1   $red0      $red1
-client.placeholder       $bg1    $bg2    $fg1   $bg1       $bg2
+# target                 title   bg            text     indicator  border
+client.background                $dark0
+client.focused           $blue   $bright_blue  $light1  $blue      $bright_blue
+client.focused_inactive  $dark1  $dark2        $light1  $dark1     $dark2
+client.focused_tab_title $dark1  $dark2        $light1
+client.unfocused         $dark0  $dark1        $gray    $dark0     $dark1
+client.urgent            $red    $bright_red   $light1  $red       $bright_red
+client.placeholder       $dark1  $dark2        $light1  $dark1     $dark2

@@ -1,5 +1,9 @@
 # Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
 setopt autocd
+bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/pedrog/.zshrc'
@@ -19,11 +23,11 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr ' *'
 zstyle ':vcs_info:*' stagedstr ' +'
 
-zstyle ':vcs_info:git:*' formats       '[%b%u%c] '
-zstyle ':vcs_info:git:*' actionformats '[%b|%a%u%c] '
+zstyle ':vcs_info:git:*' formats       ' [%b%u%c]'
+zstyle ':vcs_info:git:*' actionformats ' [%b|%a%u%c]'
 precmd () { vcs_info }
 
-PROMPT='%{$fg[cyan]%}[%n@%m] [%~] ${vcs_info_msg_0_}\$%{$reset_color%} '
+PROMPT='%{$fg[cyan]%}[%n@%m %~]${vcs_info_msg_0_}\$%{$reset_color%} '
 RPROMPT='%{$fg[cyan]%}[%*]%{$reset_color%}'
 
 ZLE_RPROMPT_INDENT=0
