@@ -1,8 +1,7 @@
 @import "gruvbox-dark.css";
 
 * {
-    font-family: "Fira Code", "Font Awesome 6 Free", "Symbols Nerd Font Mono";
-    font-weight: bold;
+    font-family: "Fira Code", "Font Awesome 6 Free";
     font-size: 12px;
 
     min-width: 0;
@@ -35,15 +34,19 @@ tooltip {
 #workspaces,
 #mode,
 #scratchpad,
-#custom-cmus,
+#custom-mpd,
 #window,
 #tray,
 #idle_inhibitor,
 #wireplumber,
+#network,
+#cpu,
+#memory,
 #backlight,
 #battery,
 #clock,
 #custom-power {
+    font-weight: bold;
     margin: 6px 2px;
     padding: 0 0.45em;
     background: @dark1;
@@ -51,7 +54,7 @@ tooltip {
 }
 
 #custom-menu {
-    padding: 0 0.7em 0 0.4em;
+    font-weight: normal;
     font-family: "Symbols Nerd Font Mono";
 }
 
@@ -93,10 +96,6 @@ window#waybar.empty #window {
     background: @dark0;
 }
 
-#custom-power {
-    padding: 0 0.525em 0 0.425em;
-}
-
 #custom-menu:hover {
     color: @bright_orange;
 }
@@ -113,7 +112,7 @@ window#waybar.empty #window {
     color: @bright_orange;
 }
 
-#custom-cmus:hover {
+#custom-mpd:hover {
     color: @bright_orange;
 }
 
@@ -122,6 +121,10 @@ window#waybar.empty #window {
 }
 
 #network:hover {
+    color: @bright_orange;
+}
+
+#wireplumber:hover {
     color: @bright_orange;
 }
 

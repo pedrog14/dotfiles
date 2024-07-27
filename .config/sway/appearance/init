@@ -3,17 +3,17 @@ default_border pixel 2
 
 gaps inner 6
 
-font pango: Fira Code 10
+font pango: Fira Code Bold 10
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-	gsettings set $gnome-schema gtk-theme 'adw-gtk3'
-	gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-	gsettings set $gnome-schema cursor-theme 'Simp1e-Gruvbox-Dark'
-	gsettings set $gnome-schema font-name 'Roboto'
-	gsettings set $gnome-schema color-scheme 'prefer-dark'
+	gsettings set $gnome-schema gtk-theme "adw-gtk3"
+	gsettings set $gnome-schema icon-theme "Papirus-Dark"
+	gsettings set $gnome-schema cursor-theme "Simp1e-Gruvbox-Dark"
+	gsettings set $gnome-schema font-name "Inter"
+	gsettings set $gnome-schema color-scheme "prefer-dark"
 }
-seat seat0 xcursor_theme 'Simp1e-Gruvbox-Dark' 
+seat seat0 xcursor_theme "Simp1e-Gruvbox-Dark" 
 
 ## Wallpaper
 output * {

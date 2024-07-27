@@ -12,13 +12,16 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
-        "custom/cmus",
+        "custom/mpd",
     ],
     "modules-center": ["sway/window"],
     "modules-right": [
         "tray",
         "idle_inhibitor",
         "wireplumber",
+        "network",
+        "cpu",
+        "memory",
         "backlight",
         "battery",
         "clock",
@@ -71,7 +74,7 @@
 
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false,
+        "tooltip": true,
     },
 
     "memory": {
@@ -139,11 +142,15 @@
         "on-click": "rofi -show p -modi p:\"rofi-power-menu\" -font \"Fira Code Medium 12\" -theme-str \"window {width: 10em;} listview {lines: 4;}\"",
     },
 
-    "custom/cmus": {
+    "custom/mpd": {
+        "exec-on-event": false,
         "return-type": "json",
         "max-length": 32,
-        "exec": "cmus-script",
-        "on-click": "cmus-remote -u",
+        "exec": "mpd-client",
         "escape": true,
+        "restart-interval": 10,
+        "on-click": "mpc toggle",
+        "on-scroll-up": "mpc volume +5",
+        "on-scroll-down": "mpc volume -5",
     },
 }

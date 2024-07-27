@@ -1,0 +1,34 @@
+#! /usr/bin/env python
+
+import time
+import json
+from datetime import timedelta
+from mpd import MPDClient
+
+client = MPDClient()
+client.connect("localhost", 6600)
+
+text = ""
+aux = ""
+
+while True:
+    status = client.status()
+    currentsong = client.currentsong()
+
+    if status["state"] != "stop":
+        icon = "" if status["state"] == "play" else ""
+        position = timedelta(seconds=int(status["time"].split(":")[0]))
+        duration = timedelta(seconds=int(status["time"].split(":")[1]))
+        text = f"{icon} {
+            currentsong["title"]} - {currentsong["album"]} - {currentsong["artist"]} [{position}/{duration}] ({status["volume"]}%)"
+    else:
+        text = ""
+
+    if aux != text:
+        print(json.dumps({"text": text, "tooltip": text}), flush=True)
+    aux = text
+
+    if status["state"] != "play":
+        client.idle("player", "mixer")
+    else:
+        time.sleep(0.1)

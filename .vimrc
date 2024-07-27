@@ -1,39 +1,35 @@
 " 󰒓 Vim settings "
 
+filetype plugin indent on
 syntax on
 
 let mapleader=' '
 
-set bg=dark
-
-set number
-set relativenumber
-
-set encoding=utf-8
-
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-
 set autoindent
-set smartindent
-
-set nowrap
-
-set nohlsearch
-set incsearch
-
-set termguicolors
-
-set signcolumn=yes
-
+set bg=dark
 set cursorline
 set cursorlineopt=line
-
-set scrolloff=4
+set encoding=utf-8
+set expandtab
+set incsearch
+set nohlsearch
+set noincsearch
 set noshowmode
-
+set nowrap
+set number
+set relativenumber
+set scrolloff=4
+set shiftwidth=4
+set sidescrolloff=8
+set signcolumn=yes
+set smartindent
+set smoothscroll
+set softtabstop=4
+set splitbelow
+set splitkeep=screen
+set splitright
+set tabstop=4
+set termguicolors
 set updatetime=200
 
 set t_RV=
@@ -41,8 +37,9 @@ set t_RV=
 " Plugins
 call plug#begin()
 
+" Colorscheme
 Plug 'gruvbox-community/gruvbox'
-Plug 'tpope/vim-fugitive'
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'dense-analysis/ale'
@@ -64,14 +61,12 @@ call plug#end()
 let g:gruvbox_italic = 1
 
 " Colorscheme adjustments
-augroup set_transparency
+augroup gruvbox_adjustments
     au!
-    au ColorScheme * hi! Normal guibg=NONE ctermbg=NONE
-    au ColorScheme * hi! VertSplit guibg=NONE ctermbg=NONE
-    au ColorScheme * hi! link SignColumn Normal
+    au ColorScheme gruvbox hi! link SignColumn Normal
 
     au ColorScheme gruvbox hi! link GitGutterAdd    GruvboxGreen
-    au ColorScheme gruvbox hi! link GitGutterChange GruvboxAqua
+    au ColorScheme gruvbox hi! link GitGutterChange GruvboxOrange
     au ColorScheme gruvbox hi! link GitGutterDelete GruvboxRed
 augroup END
 
@@ -103,23 +98,21 @@ endfunction
 " 󰌌 Keymaps "
 
 " General
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
+nnoremap <c-d> <c-d>zz
+nnoremap <c-u> <c-u>zz
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
-tnoremap <C-h> <C-w>h
-tnoremap <C-j> <C-w>j
-tnoremap <C-k> <C-w>k
-tnoremap <C-l> <C-w>l
+tnoremap <c-h> <c-w>h
+tnoremap <c-j> <c-w>j
+tnoremap <c-k> <c-w>k
+tnoremap <c-l> <c-w>l
 
-nnoremap <A-h> <Cmd>bprev<CR>
-nnoremap <A-l> <Cmd>bnext<CR>
-
-nnoremap <silent> <A-c> <Cmd>let &cc = &cc == '' ? '80' : ''<CR>
+nnoremap <a-h> <cmd>bprev<cr>
+nnoremap <a-l> <cmd>bnext<cr>
 
 " NERDTree
 nnoremap <silent> <leader>n :call SmartNERDTree()<CR>
