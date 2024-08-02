@@ -11,8 +11,8 @@ set $menu rofi -show drun
 
 ### Input
 input type:keyboard {
-    xkb_layout us
-    xkb_variant intl
+    xkb_layout br
+    # xkb_variant intl
     xkb_numlock enabled
 }
 
@@ -27,7 +27,7 @@ input type:touchpad {
 
 ### Floating windows
 for_window [title="nmtui"] floating enable
-for_window [title="galculator"] floating enable
+for_window [title="gnome-calculator"] floating enable
 
 ### Idling
 exec swayidle -w \
@@ -41,8 +41,8 @@ bar {
 }
 
 ### Include
+include config.d/*
 include autostart
 include bindings
-include config.d/*
 include appearance/*
 # include swayfx
