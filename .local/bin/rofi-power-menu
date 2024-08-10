@@ -25,11 +25,11 @@ texts[lockscreen]="Bloquear Tela"
 texts[logout]="Deslogar"
 
 declare -A icons
-icons[shutdown]="\Uf0425"
-icons[reboot]="\Uf0709"
-icons[lockscreen]="\Uf033e"
-icons[logout]="\Uf0206"
-icons[cancel]="\Uf0156"
+icons[shutdown]="\Uf011"
+icons[reboot]="\Uf2ea"
+icons[lockscreen]="\Uf023"
+icons[logout]="\Uf08b"
+icons[cancel]="\Uf00d"
 
 declare -A actions
 actions[shutdown]="systemctl poweroff"

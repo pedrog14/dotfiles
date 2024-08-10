@@ -36,10 +36,7 @@ set t_RV=
 
 " Plugins
 call plug#begin()
-
-" Colorscheme
 Plug 'gruvbox-community/gruvbox'
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'dense-analysis/ale'
@@ -54,7 +51,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
-
 call plug#end()
 
 """ Gruvbox settings
@@ -115,4 +111,4 @@ nnoremap <a-h> <cmd>bprev<cr>
 nnoremap <a-l> <cmd>bnext<cr>
 
 " NERDTree
-nnoremap <silent> <leader>n :call SmartNERDTree()<CR>
+" nnoremap <silent> <leader>n :call SmartNERDTree()<CR>
