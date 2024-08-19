@@ -64,8 +64,8 @@ tooltip {
 }
 
 #workspaces button {
-    /* margin: 4px 0; */
     background: @dark1;
+    color: @light1;
     border-radius: unset;
     padding: 0 0.4em;
 }
@@ -125,10 +125,6 @@ window#waybar.empty #window {
 }
 
 #wireplumber:hover {
-    color: @bright_orange;
-}
-
-#battery:hover {
     color: @bright_orange;
 }
 
