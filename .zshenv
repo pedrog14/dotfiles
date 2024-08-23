@@ -7,5 +7,3 @@ export PATH
 
 CPATH="$HOME/.local/include":$CPATH
 export CPATH
-
-# export XCURSOR_THEME=Breeze

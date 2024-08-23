@@ -1,6 +1,4 @@
-### SwayWM settings ###
-
-### Variables
+## Variables
 set $mod Mod4
 set $left h
 set $down j
@@ -9,10 +7,11 @@ set $right l
 set $term kitty
 set $menu rofi -show drun
 
-### Input
+## Input
 input type:keyboard {
-    xkb_layout us
-    xkb_variant intl
+    # xkb_layout us
+    xkb_layout br
+    # xkb_variant intl
     xkb_numlock enabled
 }
 
@@ -25,17 +24,17 @@ input type:touchpad {
     tap enabled
 }
 
-### Floating windows
+## Floating windows
 for_window [title="nmtui"] floating enable
 for_window [title="gnome-calculator"] floating enable
 
-### Idling
+## Idling
 exec swayidle -w \
      timeout 300 'swaylock -f -c 000000' \
      timeout 360 'swaymsg "output * power off"' \
      resume 'swaymsg "output * power on"'
 
-### Status Bar
+## Status Bar
 bar {
     swaybar_command waybar
 }

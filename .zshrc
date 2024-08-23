@@ -6,7 +6,7 @@ setopt autocd
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/pedrog/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -17,7 +17,7 @@ setopt PROMPT_SUBST
 
 autoload -Uz colors && colors
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' enable git cvs svn
 zstyle ':vcs_info:*' check-for-changes true
 
 zstyle ':vcs_info:*' unstagedstr ' *'
