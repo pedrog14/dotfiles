@@ -38,7 +38,8 @@ tooltip {
 #window,
 #tray,
 #idle_inhibitor,
-#wireplumber,
+#power-profiles-daemon,
+#pulseaudio,
 #network,
 #cpu,
 #memory,
@@ -120,11 +121,19 @@ window#waybar.empty #window {
     color: @bright_orange;
 }
 
+#power-profiles-daemon:hover {
+    color: @bright_orange;
+}
+
 #network:hover {
     color: @bright_orange;
 }
 
-#wireplumber:hover {
+pulseaudio:hover {
+    color: @bright_orange;
+}
+
+#battery:hover {
     color: @bright_orange;
 }
 

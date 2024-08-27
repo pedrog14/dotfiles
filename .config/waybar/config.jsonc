@@ -18,7 +18,8 @@
     "modules-right": [
         "tray",
         "idle_inhibitor",
-        "wireplumber",
+        "power-profiles-daemon",
+        "pulseaudio",
         "network",
         "cpu",
         "memory",
@@ -29,7 +30,6 @@
     ],
 
     // Modules configuration
-
     "custom/menu": {
         "format": "",
         "tooltip": false,
@@ -117,11 +117,10 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
 
-    "wireplumber": {
-        "scroll-step": 5,
+    "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source} ",
         "format-muted": "{volume}% ",
         "format-icons": {
             "headphone": "",
@@ -132,8 +131,10 @@
             "car": "",
             "default": ["", "", ""],
         },
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        // "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "ignored-sinks": ["Easy Effects Sink"],
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     },
 
     "custom/power": {
@@ -145,12 +146,24 @@
     "custom/mpd": {
         "exec-on-event": false,
         "return-type": "json",
-        "max-length": 32,
+        "max-length": 48,
         "exec": "mpd-client",
         "escape": true,
         "restart-interval": 10,
         "on-click": "mpc toggle",
         "on-scroll-up": "mpc volume +5",
         "on-scroll-down": "mpc volume -5",
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": "",
+        },
     },
 }
