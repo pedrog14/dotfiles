@@ -2,7 +2,7 @@
 
 My personal computer dotfiles
 
-![20231125-170706](https://github.com/PedroG14/dotfiles/assets/52004811/1a147f61-6ccb-4c21-abc4-2f1768e5d4d6)
+![20240829-121518](https://github.com/user-attachments/assets/637fdb55-d50b-439c-a022-4822e6a12077)
 
 ## Content
 
