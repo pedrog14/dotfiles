@@ -3,23 +3,16 @@
 * {
     font-family: "Fira Code", "Font Awesome 6 Free";
     font-size: 12px;
+}
 
+button {
     min-width: 0;
     min-height: 0;
 }
 
 window#waybar {
-    background: unset;
+    background-color: unset;
     color: @light1;
-}
-
-tooltip {
-    background: @dark0;
-    color: @light1;
-    border: 1px solid @light1;
-    border-radius: 4px;
-    box-shadow: unset;
-    text-shadow: unset;
 }
 
 .modules-left {
@@ -50,7 +43,7 @@ tooltip {
     font-weight: bold;
     margin: 6px 2px;
     padding: 0 0.45em;
-    background: @dark1;
+    background-color: @dark1;
     border-radius: 4px;
 }
 
@@ -60,19 +53,19 @@ tooltip {
 }
 
 #workspaces {
-    background: transparent;
-    padding: unset;
+    background-color: transparent;
+    padding: 0;
 }
 
 #workspaces button {
-    background: @dark1;
+    background-color: @dark1;
     color: @light1;
     border-radius: unset;
     padding: 0 0.4em;
 }
 
 #workspaces button.focused {
-    background: @dark2;
+    background-color: @dark2;
 }
 
 #workspaces button.urgent {
@@ -94,53 +87,38 @@ window#waybar.empty #window {
 }
 
 #tray menu {
-    background: @dark0;
+    background-color: @dark0;
+    border: 1px solid @light1;
+    border-radius: 4px;
 }
 
-#custom-menu:hover {
+#tray menu>menuitem:hover {
+    background-color: transparent;
     color: @bright_orange;
+    /* font-weight: bold; */
+    /* border-radius: 4px; */
+}
+
+#tray menu>separator {
+    color: @light1;
 }
 
 #workspaces button:hover {
     box-shadow: unset;
     text-shadow: unset;
     transition: unset;
-
-    color: @bright_orange;
 }
 
-#window:hover {
-    color: @bright_orange;
-}
-
-#custom-mpd:hover {
-    color: @bright_orange;
-}
-
-#idle_inhibitor:hover {
-    color: @bright_orange;
-}
-
-#power-profiles-daemon:hover {
-    color: @bright_orange;
-}
-
-#network:hover {
-    color: @bright_orange;
-}
-
-pulseaudio:hover {
-    color: @bright_orange;
-}
-
-#battery:hover {
-    color: @bright_orange;
-}
-
-#clock:hover {
-    color: @bright_orange;
-}
-
+#custom-menu:hover,
+#workspaces button:hover,
+#window:hover,
+#custom-mpd:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
 #custom-power:hover {
     color: @bright_orange;
 }

@@ -66,15 +66,13 @@ decoration:backdrop {
     box-shadow: none;
 }
 
-tooltip * {
-    all: unset;
+tooltip.background {
+    background-color: @window_bg_color;
+    border: 1px solid #ebdbb2;
+    border-radius: 4px;
 }
 
-tooltip {
-    background: @window_bg_color;
+tooltip * {
+    padding: 0;
     color: @window_fg_color;
-    border: 1px solid #ebdbb2;
-    /* text-shadow: none; */
-    /* box-shadow: none; */
-    border-radius: 4px;
 }
