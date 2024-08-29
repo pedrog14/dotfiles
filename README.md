@@ -31,5 +31,5 @@ My personal computer dotfiles
 ### Not so essencial, but still, it's good to have 'em
 
 - Nautilus + file roller
-- Vim
+- (Neo)Vim
 - and any other packages of your preference :)
