@@ -25,7 +25,7 @@ My personal computer dotfiles
 - wl-clipboard
 - grim + slurp
 - [mako](https://github.com/emersion/mako)
-- Kitty or other terminal emulator of your preference (do not forget to modify helper.rc if using Thunar)
+- Kitty or other terminal emulator of your preference
 - other packages that i can't remember right now...
 
 ### Not so essencial, but still, it's good to have 'em
