@@ -13,7 +13,6 @@ set encoding=utf-8
 set expandtab
 set incsearch
 set nohlsearch
-set noincsearch
 set noshowmode
 set nowrap
 set number
@@ -82,15 +81,6 @@ let g:ctrlp_cmd = 'CtrlP'
 " IndentLine
 let g:indentLine_char = '│'
 
-" Functions
-function! SmartNERDTree()
-    if g:NERDTree.IsOpen() || @% == ''
-        NERDTreeToggle
-    else
-        NERDTreeFind
-    endif
-endfunction
-
 " 󰌌 Keymaps "
 
 " General
@@ -111,4 +101,4 @@ nnoremap <a-h> <cmd>bprev<cr>
 nnoremap <a-l> <cmd>bnext<cr>
 
 " NERDTree
-" nnoremap <silent> <leader>n :call SmartNERDTree()<CR>
+nnoremap <leader>n <cmd>NERDTreeToggle<cr>

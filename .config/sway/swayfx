@@ -7,4 +7,3 @@ blur_xray disable
 corner_radius 4
 
 layer_effects "waybar" blur enable
-

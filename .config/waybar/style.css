@@ -87,16 +87,15 @@ window#waybar.empty #window {
 }
 
 #tray menu {
-    background-color: @dark0;
-    border: 1px solid @light1;
+    background-color: @dark1;
+    border: 1px solid @dark2;
     border-radius: 4px;
 }
 
 #tray menu>menuitem:hover {
-    background-color: transparent;
-    color: @bright_orange;
-    /* font-weight: bold; */
-    /* border-radius: 4px; */
+    background-color: @dark2;
+    color: @light1;
+    border-radius: 4px;
 }
 
 #tray menu>separator {

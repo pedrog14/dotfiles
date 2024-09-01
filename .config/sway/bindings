@@ -105,18 +105,6 @@ bindsym --locked $mod+Control+XF86TouchpadToggle input type:touchpad events togg
 # Take Screenshot
 bindsym Print 			 exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
 bindsym $mod+Shift+Print exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
-# bindsym $mod+Shift+Print exec 'grim -g "$(slurp)" - | swappy -f -'
 
 # Emoji Menu
 bindsym $mod+m exec rofimoji
-
-# Copying and Pasting
-#
-# The keybind to select a clipping
-bindsym $mod+y       exec clipman --primary pick --tool rofi
-# Clear all clippings
-bindsym $mod+Shift+y exec clipman clear -a
-# Remove a selected clipping
-bindsym $mod+Mod1+y  exec clipman clear --tool rofi
-# Empty the current clipping
-bindsym $mod+Ctrl+y  exec : | wl-copy -p

@@ -75,4 +75,5 @@ tooltip.background {
 tooltip * {
     padding: 0;
     color: @window_fg_color;
+    text-shadow: none;
 }
