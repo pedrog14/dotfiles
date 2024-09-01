@@ -10,15 +10,19 @@ client.connect("localhost", 6600)
 
 text = ""
 aux = ""
+currentsong = ""
+duration = ""
+timeStart = time.time()
 
 while True:
     status = client.status()
-    currentsong = client.currentsong()
 
     if status["state"] != "stop":
         icon = "" if status["state"] == "play" else ""
-        position = timedelta(seconds=int(status["time"].split(":")[0]))
-        duration = timedelta(seconds=int(status["time"].split(":")[1]))
+        currentsong = client.currentsong()
+        if duration != status["duration"]:
+            duration = timedelta(seconds=int(float(status["duration"])))
+        position = timedelta(seconds=int(float(status["elapsed"])))
         text = f"{icon} {
             currentsong["title"]} - {currentsong["album"]} - {currentsong["artist"]} [{position}/{duration}] ({status["volume"]}%)"
     else:
@@ -29,6 +33,6 @@ while True:
     aux = text
 
     if status["state"] != "play":
-        client.idle("player", "mixer")
+        client.idle("player")
     else:
-        time.sleep(0.1)
+        time.sleep(0.05)
