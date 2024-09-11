@@ -1,11 +1,12 @@
 ### Bindings
+set $rofi-power-menu rofi -show p -modi p:"rofi-power-menu" -font "Fira Code Medium 12" -theme-str "window {width: 10em;} listview {lines: 4;}"
 
 ### META
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec rofi -show p -modi p:"rofi-power-menu" -font "Fira Code Medium 12" -theme-str "window {width: 10em;} listview {lines: 4;}"
+bindsym $mod+Shift+e exec $rofi-power-menu
 
 ## Movement
 bindsym $mod+$left focus left
@@ -84,6 +85,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Power Button
+bindsym --locked XF86PowerOff exec $rofi-power-menu
+
 # Adjust brightness
 bindsym --locked XF86MonBrightnessUp   exec brightnessctl set 5%+
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -98,9 +102,6 @@ bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioPrev exec playerctl previous
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioStop exec playerctl stop
-
-# Toggle Touchpad
-bindsym --locked $mod+Control+XF86TouchpadToggle input type:touchpad events toggle enabled disabled
 
 # Take Screenshot
 bindsym Print 			 exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
