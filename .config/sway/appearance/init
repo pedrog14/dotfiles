@@ -1,8 +1,5 @@
-### Appearance customization
 default_border pixel 2
-
 gaps inner 6
-
 font pango: Fira Code Bold 10
 
 set $gnome-schema org.gnome.desktop.interface
@@ -15,7 +12,7 @@ exec_always {
 }
 seat seat0 xcursor_theme "Simp1e-Gruvbox-Dark" 
 
-## Wallpaper
+# Wallpaper
 output * {
     bg $HOME/.local/share/backgrounds/gruv-portal-cake.png fill
 }
