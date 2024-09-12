@@ -1,12 +1,21 @@
 ### Bindings
-set $rofi-power-menu rofi -show p -modi p:"rofi-power-menu" -font "Fira Code Medium 12" -theme-str "window {width: 10em;} listview {lines: 4;}"
 
-### META
+## Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term kitty
+set $menu rofi -show drun
+set $power-menu rofi -show p -modi p:"rofi-power-menu" -font "Fira Code Medium 12" -theme-str "window {width: 10em;} listview {lines: 4;}"
+
+## System
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec $rofi-power-menu
+bindsym $mod+Shift+e exec $power-menu
 
 ## Movement
 bindsym $mod+$left focus left
@@ -86,7 +95,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Power Button
-bindsym --locked XF86PowerOff exec $rofi-power-menu
+bindsym --locked XF86PowerOff exec $power-menu
 
 # Adjust brightness
 bindsym --locked XF86MonBrightnessUp   exec brightnessctl set 5%+
