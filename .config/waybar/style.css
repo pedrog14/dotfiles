@@ -15,33 +15,8 @@ window#waybar {
     color: @light1;
 }
 
-.modules-left {
-    margin-left: 4px;
-}
-
-.modules-right {
-    margin-right: 4px;
-}
-
-#custom-menu,
-#workspaces,
-#mode,
-#scratchpad,
-#custom-mpd,
-#window,
-#tray,
-#idle_inhibitor,
-#power-profiles-daemon,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#backlight,
-#battery,
-#clock,
-#custom-power {
+.module {
     font-weight: bold;
-    margin: 6px 2px;
     padding: 0 0.45em;
     background-color: @dark1;
     border-radius: 4px;
