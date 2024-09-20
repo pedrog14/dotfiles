@@ -1,0 +1,98 @@
+@import "gruvbox-dark.css";
+
+* {
+    font-family: "Fira Code", "Font Awesome 6 Free";
+    font-size: 12px;
+}
+
+button {
+    min-width: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: unset;
+    color: @light1;
+}
+
+.module {
+    font-weight: bold;
+    padding: 0 0.45em;
+    background-color: @dark1;
+    border-radius: 4px;
+}
+
+#custom-menu {
+    font-weight: normal;
+    font-family: "Symbols Nerd Font Mono";
+}
+
+#workspaces {
+    background-color: transparent;
+    padding: 0;
+}
+
+#workspaces button {
+    background-color: @dark1;
+    color: @light1;
+    border-radius: unset;
+    padding: 0 0.4em;
+}
+
+#workspaces button.focused {
+    background-color: @dark2;
+}
+
+#workspaces button.urgent {
+    color: @bright_red;
+}
+
+#workspaces button:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#workspaces button:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+window#waybar.empty #window {
+    all: unset;
+}
+
+#tray menu {
+    background-color: @dark1;
+    border: 1px solid @dark2;
+    border-radius: 4px;
+}
+
+#tray menu>menuitem:hover {
+    background-color: @dark2;
+    color: @light1;
+    border-radius: 4px;
+}
+
+#tray menu>separator {
+    color: @light1;
+}
+
+#workspaces button:hover {
+    box-shadow: unset;
+    text-shadow: unset;
+    transition: unset;
+}
+
+#custom-menu:hover,
+#workspaces button:hover,
+#window:hover,
+#custom-mpd:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
+#custom-power:hover {
+    color: @bright_orange;
+}
