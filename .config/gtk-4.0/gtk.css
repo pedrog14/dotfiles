@@ -1,53 +1,95 @@
-@define-color window_bg_color #282828;
-@define-color window_fg_color #ebdbb2;
+/*----------------------------Gruvbox Colorscheme-----------------------------*/
 
-@define-color view_bg_color @window_bg_color;
-@define-color view_fg_color @window_fg_color;
+@define-color dark0_hard #1D2021;
+@define-color dark0 #282828;
+@define-color dark0_soft #32302F;
 
-@define-color accent_color #83a598;
-@define-color accent_bg_color @accent_color;
-@define-color accent_fg_color #ebdbb2;
+@define-color dark1 #3C3836;
+@define-color dark2 #504945;
+@define-color dark3 #665C54;
+@define-color dark4 #7C6F64;
 
-@define-color headerbar_bg_color #3c3836;
-@define-color headerbar_fg_color @window_fg_color;
-@define-color headerbar_border_color #ebdbb2;
-@define-color headerbar_backdrop_color @window_bg_color;
+@define-color light0 #FBF1C7;
+@define-color light1 #EBDBB2;
+@define-color light2 #D5C4A1;
+@define-color light3 #BDAE93;
+@define-color light4 #A89984;
 
-@define-color popover_bg_color @headerbar_bg_color;
-@define-color popover_fg_color @view_fg_color;
+@define-color gray #928374;
+
+@define-color red #CC241D;
+@define-color bright_red #FB4934;
+
+@define-color orange #D65D0E;
+@define-color bright_orange #FE8019;
+
+@define-color yellow #D79921;
+@define-color bright_yellow #FABD2F;
+
+@define-color green #98971A;
+@define-color bright_green #B8BB26;
+
+@define-color aqua #689D6A;
+@define-color bright_aqua #8EC07C;
+
+@define-color blue #458588;
+@define-color bright_blue #83A598;
+
+@define-color purple #B16286;
+@define-color bright_purple #D3869B;
+
+/*----------------------------------------------------------------------------*/
+
+@define-color window_bg_color @dark0;
+@define-color window_fg_color @light1;
+
+@define-color view_bg_color @dark0;
+@define-color view_fg_color @light1;
+
+@define-color accent_color @bright_blue;
+@define-color accent_bg_color @bright_blue;
+@define-color accent_fg_color @light1;
+
+@define-color headerbar_bg_color @dark1;
+@define-color headerbar_fg_color @light1;
+@define-color headerbar_border_color @light1;
+@define-color headerbar_backdrop_color @dark0;
+
+@define-color popover_bg_color @dark1;
+@define-color popover_fg_color @light1;
 
 @define-color dialog_bg_color @popover_bg_color;
 @define-color dialog_fg_color @popover_fg_color;
 
-@define-color card_bg_color @headerbar_bg_color;
-@define-color card_fg_color @view_fg_color;
+@define-color card_bg_color @dark1;
+@define-color card_fg_color @light1;
 
-@define-color thumbnail_bg_color @headerbar_bg_color;
+@define-color thumbnail_bg_color @dark1;
 
-@define-color sidebar_bg_color @headerbar_bg_color;
-@define-color sidebar_fg_color @view_fg_color;
-@define-color sidebar_backdrop_color @sidebar_bg_color;
-@define-color secondary_sidebar_bg_color @sidebar_bg_color;
-@define-color secondary_sidebar_backdrop_color @headerbar_bg_color;
+@define-color sidebar_bg_color @dark1;
+@define-color sidebar_fg_color @light1;
+@define-color sidebar_backdrop_color @dark1;
+@define-color secondary_sidebar_bg_color @dark1;
+@define-color secondary_sidebar_backdrop_color @dark1;
 
-@define-color success_color #8ec07c;
+@define-color success_color @bright_aqua;
 @define-color success_bg_color @success_color;
-@define-color success_fg_color #ebdbb2;
+@define-color success_fg_color @light1;
 
-@define-color warning_color #fabd2f;
+@define-color warning_color @bright_yellow;
 @define-color warning_bg_color @warning_color;
-@define-color warning_fg_color #ebdbb2;
+@define-color warning_fg_color @light1;
 
-@define-color error_color #fb4934;
+@define-color error_color @bright_red;
 @define-color error_bg_color @error_color;
-@define-color error_fg_color #ebdbb2;
+@define-color error_fg_color @light1;
 
-@define-color destructive_color #fb4934;
+@define-color destructive_color @bright_red;
 @define-color destructive_bg_color @destructive_color;
-@define-color destructive_fg_color #ebdbb2;
+@define-color destructive_fg_color @light1;
 
 .navigation-sidebar {
-    background-color: @headerbar_bg_color;
+    background-color: @dark1;
 }
 
 /** Some apps use titlebar class and some window */
@@ -67,13 +109,13 @@ decoration:backdrop {
 }
 
 tooltip.background {
-    background-color: @window_bg_color;
-    border: 1px solid #ebdbb2;
+    background-color: @dark0;
+    border: 1px solid @light1;
     border-radius: 4px;
 }
 
 tooltip * {
     padding: 0;
-    color: @window_fg_color;
+    color: @light1;
     text-shadow: none;
 }

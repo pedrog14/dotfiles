@@ -1,3 +1,5 @@
+### Appearance - Color 
+
 include colorschemes/gruvbox-dark
 
 # target                 title   bg            text     indicator  border
