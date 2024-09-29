@@ -67,13 +67,13 @@ window#waybar.empty #window {
     border-radius: 4px;
 }
 
-#tray menu>menuitem:hover {
+#tray menu > menuitem:hover {
     background-color: @dark2;
     color: @light1;
     border-radius: 4px;
 }
 
-#tray menu>separator {
+#tray menu > separator {
     color: @light1;
 }
 

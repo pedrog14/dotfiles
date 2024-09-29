@@ -30,6 +30,10 @@
     ],
 
     // Modules configuration
+    "sway/workspaces": {
+        "on-click": "activate",
+    },
+
     "custom/menu": {
         "format": "",
         "tooltip": false,
