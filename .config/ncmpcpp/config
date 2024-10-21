@@ -5,7 +5,7 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "●▮"
 
-song_status_format = {{%a{ - "%b"{ (%y)}} - }{{%n. }%t}}|{%f}
+# song_status_format = {{%a{ - "%b"{ (%y)}} - }{{%n. }%t}}|{%f}
 
 volume_change_step = 5
 

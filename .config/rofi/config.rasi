@@ -154,6 +154,8 @@ configuration {
     }
 }
 
-//@theme "gruvbox-dark-round.rasi"
-
 @theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+window {
+    border-radius: 6;
+}

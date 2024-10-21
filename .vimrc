@@ -100,5 +100,7 @@ tnoremap <c-l> <c-w>l
 nnoremap <a-h> <cmd>bprev<cr>
 nnoremap <a-l> <cmd>bnext<cr>
 
+nnoremap <a-x> <cmd>bdelete<cr>
+
 " NERDTree
 nnoremap <leader>n <cmd>NERDTreeToggle<cr>

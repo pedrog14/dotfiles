@@ -1,11 +1,11 @@
-## SwayWM configs
+# SwayWM configs
 
-### Autostart
-exec autotiling-rs
+## Autostart
+exec autotiling
 exec mako
 exec easyeffects --gapplication-service
 
-### Variables
+## Variables
 set $mod Mod4
 set $left h
 set $down j
@@ -13,14 +13,10 @@ set $up k
 set $right l
 set $term kitty
 set $menu rofi -show drun
-set $power-menu rofi -show p -modi p:"rofi-power-menu" \
-                     -font "Fira Code Medium 12" \
+set $power-menu rofi -show p -modi p:"power-menu" \
                      -theme-str "window {width: 10em;} listview {lines: 4;}"
 
-### Output
-output * bg $HOME/.local/share/backgrounds/gruv-portal-cake.png fill
-
-### Input
+## Input
 input type:keyboard {
     xkb_layout us
     # xkb_layout br
@@ -36,6 +32,9 @@ input type:touchpad {
     natural_scroll enabled
     tap enabled
 }
+
+## Output
+output * bg $HOME/.local/share/backgrounds/gruv-portal-cake.png fill
 
 ### Key bindings
 
@@ -91,6 +90,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
 
 bindsym $mod+Shift+space floating toggle
+
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
@@ -115,46 +115,46 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-## Miscellaneous
+### Miscellaneous
 
-# Power Button
+## Power Button
 bindsym --locked XF86PowerOff exec $power-menu
 
-# Adjust brightness
+## Adjust brightness
 bindsym --locked XF86MonBrightnessUp   exec brightnessctl set 5%+
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 
-# Adjust volume
+## Adjust volume
 bindsym --locked XF86AudioMute		  exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.0
 bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0
 
-# Player
+## Player
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioPrev exec playerctl previous
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioStop exec playerctl stop
 
-# Take Screenshot
+## Take Screenshot
 bindsym Print 			 exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
 bindsym $mod+Shift+Print exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
 
-# Emoji Menu
+## Emoji Menu
 bindsym $mod+m exec rofimoji
 
-### Window rules
+## Window rules
 for_window {
     [app_id="org.gnome.Calculator"] floating enable
 }
 
-### Idling
+## Idling
 exec swayidle -w \
      timeout 300 'swaylock -f' \
      timeout 360 'swaymsg "output * power off"' \
      resume 'swaymsg "output * power on"' \
      before-sleep 'swaylock -f'
 
-### Appearance customization
+## Appearance customization
 default_border pixel 2
 gaps inner 6
 font pango: Fira Code Medium 10
@@ -181,9 +181,23 @@ client.unfocused         $dark0  $dark1        $gray    $dark0     $dark1
 client.urgent            $red    $bright_red   $light1  $red       $bright_red
 client.placeholder       $dark1  $dark2        $light1  $dark1     $dark2
 
-### Status Bar
+## SwayFX
+# window corner radius in px
+corner_radius 6
+
+# Window background blur
+blur enable
+blur_xray disable
+
+# Window shadows
+shadows disable
+
+# Move minimized windows into Scratchpad (enable|disable)
+scratchpad_minimize disable
+
+## Status Bar
 bar {
     swaybar_command waybar
 }
 
-include config.d/*
+include /etc/sway/config.d/*

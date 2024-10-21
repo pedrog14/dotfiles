@@ -144,7 +144,7 @@
     "custom/power": {
         "format": "",
         "tooltip": false,
-        "on-click": "rofi -show p -modi p:\"rofi-power-menu\" -font \"Fira Code Medium 12\" -theme-str \"window {width: 10em;} listview {lines: 4;}\"",
+        "on-click": "rofi -show p -modi p:\"power-menu\" -font \"Fira Code Medium 12\" -theme-str \"window {width: 10em;} listview {lines: 4;}\"",
     },
 
     "custom/mpd": {
