@@ -38,7 +38,7 @@ call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -69,7 +69,7 @@ colorscheme gruvbox
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_extensions = [ 'ale', 'ctrlp', 'fzf', 'tabline', 'hunks' ]
+let g:airline_extensions = [ 'coc', 'ctrlp', 'fzf', 'tabline', 'hunks' ]
 
 " NERDTree
 let g:NERDTreeShowHidden = 1
@@ -101,6 +101,9 @@ nnoremap <a-h> <cmd>bprev<cr>
 nnoremap <a-l> <cmd>bnext<cr>
 
 nnoremap <a-x> <cmd>bdelete<cr>
+
+vnoremap > >gv
+vnoremap < <gv
 
 " NERDTree
 nnoremap <leader>n <cmd>NERDTreeToggle<cr>
