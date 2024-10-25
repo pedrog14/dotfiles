@@ -18,9 +18,9 @@ set $power-menu rofi -show p -modi p:"power-menu" \
 
 ## Input
 input type:keyboard {
-    xkb_layout us
-    # xkb_layout br
-    xkb_variant intl
+    # xkb_layout us
+    xkb_layout br
+    # xkb_variant intl
     xkb_numlock enabled
 }
 
@@ -157,7 +157,7 @@ exec swayidle -w \
 ## Appearance customization
 default_border pixel 2
 gaps inner 6
-font pango: Fira Code Medium 10
+font pango: Fira Code 10
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -182,18 +182,7 @@ client.urgent            $red    $bright_red   $light1  $red       $bright_red
 client.placeholder       $dark1  $dark2        $light1  $dark1     $dark2
 
 ## SwayFX
-# window corner radius in px
-corner_radius 6
-
-# Window background blur
-blur enable
-blur_xray disable
-
-# Window shadows
-shadows disable
-
-# Move minimized windows into Scratchpad (enable|disable)
-scratchpad_minimize disable
+include swayfx
 
 ## Status Bar
 bar {

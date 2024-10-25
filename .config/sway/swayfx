@@ -1,0 +1,15 @@
+## SwayFX
+# window corner radius in px
+corner_radius 6
+
+# Window background blur
+blur enable
+blur_xray disable
+
+# Window shadows
+shadows disable
+
+# Move minimized windows into Scratchpad (enable|disable)
+scratchpad_minimize disable
+
+# vi:filetype=swayconfig
