@@ -21,11 +21,13 @@ zstyle ':vcs_info:*' enable git cvs svn
 zstyle ':vcs_info:*' check-for-changes true
 
 zstyle ':vcs_info:*' unstagedstr ' *'
-zstyle ':vcs_info:*' stagedstr   ' +'
+zstyle ':vcs_info:*' stagedstr ' +'
 
-zstyle ':vcs_info:git:*' formats       ' [%b%u%c]'
+zstyle ':vcs_info:git:*' formats ' [%b%u%c]'
 zstyle ':vcs_info:git:*' actionformats ' [%b|%a%u%c]'
-precmd () { vcs_info }
+precmd() {
+    vcs_info
+}
 
 PROMPT='%{$fg[cyan]%}[%n@%m %~]${vcs_info_msg_0_}\$%{$reset_color%} '
 RPROMPT='%{$fg[cyan]%}[%*]%{$reset_color%}'
@@ -36,5 +38,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Set up fzf key bindings and fuzzy completion
+# Set up fzf + bob + rustup
 source <(fzf --zsh)
+source <(bob complete zsh)
+source <(rustup completions zsh)

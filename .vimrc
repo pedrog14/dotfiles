@@ -79,7 +79,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " IndentLine
-let g:indentLine_char = '│'
+let g:indentLine_char = '▎'
 
 " 󰌌 Keymaps "
 
@@ -100,10 +100,8 @@ tnoremap <c-l> <c-w>l
 nnoremap <a-h> <cmd>bprev<cr>
 nnoremap <a-l> <cmd>bnext<cr>
 
+nnoremap <a-c> <cmd>quit<cr>
 nnoremap <a-x> <cmd>bdelete<cr>
-
-vnoremap > >gv
-vnoremap < <gv
 
 " NERDTree
 nnoremap <leader>n <cmd>NERDTreeToggle<cr>

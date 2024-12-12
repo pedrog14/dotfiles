@@ -2,8 +2,10 @@ export EDITOR=nvim
 export VISUAL=nvim
 export QT_QPA_PLATFORMTHEME=qt6ct
 
-PATH="$HOME/.local/bin":$PATH
-CPATH="$HOME/.local/include":$CPATH
+PNPMPATH="$HOME/.local/share/pnpm"         # pnpm path
+HSPATH="$HOME/.cabal/bin:$HOME/.ghcup/bin" # Haskell install path
+PATH="$HOME/.local/bin:$PNPMPATH:$HSPATH:$PATH"
+CPATH="$HOME/.local/include:$CPATH"
 
 export PATH
 export CPATH

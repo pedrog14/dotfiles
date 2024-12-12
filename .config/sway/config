@@ -13,7 +13,8 @@ set $up k
 set $right l
 set $term kitty
 set $menu rofi -show drun
-set $power-menu rofi -show p -modi p:"power-menu" \
+set $power-menu rofi -show p \
+                     -modi p:"power-menu" \
                      -theme-str "window {width: 10em;} listview {lines: 4;}"
 
 ## Input
@@ -22,6 +23,8 @@ input type:keyboard {
     xkb_layout br
     # xkb_variant intl
     xkb_numlock enabled
+
+    xkb_options caps:escape
 }
 
 input type:pointer {
@@ -115,14 +118,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-### Miscellaneous
+### Utilities
 
 ## Power Button
 bindsym --locked XF86PowerOff exec $power-menu
 
 ## Adjust brightness
-bindsym --locked XF86MonBrightnessUp   exec brightnessctl set 5%+
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp   exec brightnessctl set 5%+
 
 ## Adjust volume
 bindsym --locked XF86AudioMute		  exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -137,15 +140,13 @@ bindsym --locked XF86AudioStop exec playerctl stop
 
 ## Take Screenshot
 bindsym Print 			 exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
-bindsym $mod+Shift+Print exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
+bindsym $mod+Shift+p exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
 
 ## Emoji Menu
 bindsym $mod+m exec rofimoji
 
 ## Window rules
-for_window {
-    [app_id="org.gnome.Calculator"] floating enable
-}
+for_window [app_id="org.gnome.Calculator"] floating enable
 
 ## Idling
 exec swayidle -w \
@@ -157,7 +158,7 @@ exec swayidle -w \
 ## Appearance customization
 default_border pixel 2
 gaps inner 6
-font pango: Fira Code 10
+font pango: JetBrains Mono 10
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -167,26 +168,26 @@ exec_always {
 	gsettings set $gnome-schema font-name "Inter"
 	gsettings set $gnome-schema color-scheme "prefer-dark"
 }
-seat seat0 xcursor_theme "Simp1e-Gruvbox-Dark" 
+seat seat0 xcursor_theme "Simp1e-Gruvbox-Dark"
 
 ## Colorscheme
-include colorschemes/gruvbox-dark
+include colorschemes/gruvbox
 
-# target                 title   bg            text     indicator  border
-client.background                $dark0
-client.focused           $blue   $bright_blue  $light1  $blue      $bright_blue
-client.focused_inactive  $dark1  $dark2        $light1  $dark1     $dark2
-client.focused_tab_title $dark1  $dark2        $light1
-client.unfocused         $dark0  $dark1        $gray    $dark0     $dark1
-client.urgent            $red    $bright_red   $light1  $red       $bright_red
-client.placeholder       $dark1  $dark2        $light1  $dark1     $dark2
-
-## SwayFX
-include swayfx
+# target                  title         bg          text     indicator     border
+client.background                       $dark0
+client.focused            $medium_blue  $soft_blue  $light1  $medium_blue  $soft_blue
+client.focused_inactive   $dark1        $dark2      $light1  $dark1        $dark2
+client.focused_tab_title  $dark1        $dark2      $light1
+client.unfocused          $dark0        $dark1      $gray    $dark0        $dark1
+client.urgent             $medium_red   $soft_red   $light1  $medium_red   $soft_red
+client.placeholder        $dark1        $dark2      $light1  $dark1        $dark2
 
 ## Status Bar
 bar {
     swaybar_command waybar
 }
+
+## SwayFX
+# include swayfx
 
 include /etc/sway/config.d/*

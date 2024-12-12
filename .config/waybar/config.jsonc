@@ -119,6 +119,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click-right": "xdg-terminal-exec -e nmtui",
     },
 
     "pulseaudio": {
