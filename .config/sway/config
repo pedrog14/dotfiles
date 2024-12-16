@@ -19,9 +19,8 @@ set $power-menu rofi -show p \
 
 ## Input
 input type:keyboard {
-    # xkb_layout us
-    xkb_layout br
-    # xkb_variant intl
+    xkb_layout us
+    xkb_variant intl
     xkb_numlock enabled
 
     xkb_options caps:escape
@@ -139,11 +138,11 @@ bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioStop exec playerctl stop
 
 ## Take Screenshot
-bindsym Print 			 exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
+bindsym Print        exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
 bindsym $mod+Shift+p exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
 
 ## Emoji Menu
-bindsym $mod+m exec rofimoji
+bindsym $mod+m exec rofimoji --files emojis kaomoji
 
 ## Window rules
 for_window [app_id="org.gnome.Calculator"] floating enable
@@ -158,7 +157,7 @@ exec swayidle -w \
 ## Appearance customization
 default_border pixel 2
 gaps inner 6
-font pango: JetBrains Mono 10
+font pango: Fira Code 10
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {

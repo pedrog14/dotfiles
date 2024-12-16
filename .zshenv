@@ -4,7 +4,8 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 
 PNPMPATH="$HOME/.local/share/pnpm"         # pnpm path
 HSPATH="$HOME/.cabal/bin:$HOME/.ghcup/bin" # Haskell install path
-PATH="$HOME/.local/bin:$PNPMPATH:$HSPATH:$PATH"
+BOBPATH="$HOME/.local/share/bob/nvim-bin"
+PATH="$HOME/.local/bin:$BOBPATH:$PNPMPATH:$HSPATH:$PATH"
 CPATH="$HOME/.local/include:$CPATH"
 
 export PATH

@@ -1,8 +1,8 @@
 @import "gruvbox-dark.css";
 
 * {
-    font-family: "JetBrains Mono", "Font Awesome 6 Free";
-    font-size: 10pt;
+    font-family: "Fira Code", "Font Awesome 6 Free";
+    font-size: 9pt;
 }
 
 button {
