@@ -11,7 +11,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term kitty
+set $term ghostty
 set $menu rofi -show drun
 set $power-menu rofi -show p \
                      -modi p:"power-menu" \

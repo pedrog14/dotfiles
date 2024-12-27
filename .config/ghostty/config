@@ -1,0 +1,15 @@
+font-family = Fira Code
+
+adjust-underline-position = 3
+
+confirm-close-surface = false
+
+mouse-hide-while-typing = true
+
+window-decoration = false
+
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+
+theme = GruvboxDark
