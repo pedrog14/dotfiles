@@ -157,7 +157,7 @@ exec swayidle -w \
 ## Appearance customization
 default_border pixel 2
 gaps inner 6
-font pango: Fira Code 10
+font pango: Fira Code 9
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -172,21 +172,18 @@ seat seat0 xcursor_theme "Simp1e-Gruvbox-Dark"
 ## Colorscheme
 include colorschemes/gruvbox
 
-# target                  title         bg          text     indicator     border
-client.background                       $dark0
-client.focused            $medium_blue  $soft_blue  $light1  $medium_blue  $soft_blue
-client.focused_inactive   $dark1        $dark2      $light1  $dark1        $dark2
-client.focused_tab_title  $dark1        $dark2      $light1
-client.unfocused          $dark0        $dark1      $gray    $dark0        $dark1
-client.urgent             $medium_red   $soft_red   $light1  $medium_red   $soft_red
-client.placeholder        $dark1        $dark2      $light1  $dark1        $dark2
+# target                  title          bg            text     indicator     border
+client.background                        $dark0
+client.focused            $neutral_blue  $bright_blue  $light1  $medium_blue  $soft_blue
+client.focused_inactive   $dark1         $dark2        $light1  $dark1        $dark2
+client.focused_tab_title  $dark1         $dark2        $light1
+client.unfocused          $dark0         $dark1        $gray    $dark0        $dark1
+client.urgent             $neutral_red   $bright_red   $light1  $medium_red   $soft_red
+client.placeholder        $dark1         $dark2        $light1  $dark1        $dark2
 
 ## Status Bar
 bar {
     swaybar_command waybar
 }
-
-## SwayFX
-# include swayfx
 
 include /etc/sway/config.d/*

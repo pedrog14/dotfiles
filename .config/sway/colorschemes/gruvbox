@@ -1,41 +1,43 @@
-set $light0_hard   #F9F5D7
-set $light0        #FBF1C7
-set $light0_soft   #F2E5BC
-set $light1        #EBDBB2
-set $light2        #D5C4A1
-set $light3        #BDAE93
-set $light4        #A89984
-set $gray          #928374
-set $dark4         #7C6F64
-set $dark3         #665C54
-set $dark2         #504945
-set $dark1         #3C3836
-set $dark0_soft    #32302F
-set $dark0         #282828
-set $dark0_hard    #1D2021
+set $light0_hard    #F9F5D7
+set $light0         #FBF1C7
+set $light0_soft    #F2E5BC
+set $light1         #EBDBB2
+set $light2         #D5C4A1
+set $light3         #BDAE93
+set $light4         #A89984
 
-set $hard_red      #9D0006
-set $hard_orange   #AF3A03
-set $hard_yellow   #B57614
-set $hard_green    #79740E
-set $hard_aqua     #427B58
-set $hard_blue     #076678
-set $hard_purple   #8F3F71
+set $dark0_hard     #1D2021
+set $dark0          #282828
+set $dark0_soft     #32302F
+set $dark1          #3C3836
+set $dark2          #504945
+set $dark3          #665C54
+set $dark4          #7C6F64
 
-set $medium_red    #CC241D
-set $medium_orange #D65D0E
-set $medium_yellow #D79921
-set $medium_green  #98971A
-set $medium_aqua   #689D6A
-set $medium_blue   #458588
-set $medium_purple #B16286
+set $gray           #928374
 
-set $soft_red      #FB4934
-set $soft_orange   #FE8019
-set $soft_yellow   #FABD2F
-set $soft_green    #B8BB26
-set $soft_aqua     #8EC07C
-set $soft_blue     #83A598
-set $soft_purple   #D3869B
+set $bright_red     #FB4934
+set $bright_orange  #FE8019
+set $bright_yellow  #FABD2F
+set $bright_green   #B8BB26
+set $bright_aqua    #8EC07C
+set $bright_blue    #83A598
+set $bright_purple  #D3869B
+
+set $neutral_red    #CC241D
+set $neutral_orange #D65D0E
+set $neutral_yellow #D79921
+set $neutral_green  #98971A
+set $neutral_aqua   #689D6A
+set $neutral_blue   #458588
+set $neutral_purple #B16286
+
+set $faded_red      #9D0006
+set $faded_orange   #AF3A03
+set $faded_yellow   #B57614
+set $faded_green    #79740E
+set $faded_aqua     #427B58
+set $faded_blue     #076678
+set $faded_purple   #8F3F71
 
 # vi:filetype=swayconfig

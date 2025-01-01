@@ -16,15 +16,9 @@ window#waybar {
 }
 
 .module {
-    font-weight: bold;
-    padding: 0 0.45em;
+    padding: 0 3pt;
     background-color: @dark1;
     border-radius: 4px;
-}
-
-#custom-menu {
-    font-weight: normal;
-    font-family: "Symbols Nerd Font Mono";
 }
 
 #workspaces {
@@ -36,7 +30,7 @@ window#waybar {
     background-color: @dark1;
     color: @light1;
     border-radius: unset;
-    padding: 0 0.4em;
+    padding: 0 3pt;
 }
 
 #workspaces button.focused {
