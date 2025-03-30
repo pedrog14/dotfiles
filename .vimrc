@@ -28,7 +28,7 @@ set relativenumber
 set scrolloff=4
 set shiftround
 set shiftwidth=4
-set shortmess+=WIcC
+set shortmess+=WcC
 set sidescrolloff=8
 set signcolumn=yes
 set smartindent
@@ -64,9 +64,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-""" Gruvbox settings
-let g:gruvbox_italic = 1
-
 " Colorscheme adjustments
 augroup gruvbox_adjustments
     au!
@@ -94,21 +91,19 @@ let g:indentLine_char = '│'
 " 󰌌 Keymaps "
 
 " General
+nnoremap <a-h> <cmd>bprev<cr>
+nnoremap <a-l> <cmd>bnext<cr>
+
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-tnoremap <c-h> <c-w>h
-tnoremap <c-j> <c-w>j
-tnoremap <c-k> <c-w>k
-tnoremap <c-l> <c-w>l
-
-nnoremap <a-h> <cmd>bprev<cr>
-nnoremap <a-l> <cmd>bnext<cr>
-
 nnoremap <a-c> <cmd>quit<cr>
 nnoremap <a-x> <cmd>bdelete<cr>
+
+nnoremap <a-s> <c-w>s
+nnoremap <a-v> <c-w>v
 
 " NERDTree
 nnoremap <leader>n <cmd>NERDTreeToggle<cr>

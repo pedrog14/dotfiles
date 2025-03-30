@@ -8,12 +8,17 @@ theme = "GruvboxDark"
 confirm-close-surface = false
 mouse-hide-while-typing = true
 
-window-decoration = false
-
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
 
-keybind = super+shift+enter=new_split:auto
+keybind = shift+ctrl+enter=new_split:auto
+keybind = shift+ctrl+kp_enter=new_split:auto
+keybind = shift+ctrl+q=close_surface
+
+keybind = shift+ctrl+h=goto_split:left
+keybind = shift+ctrl+j=goto_split:bottom
+keybind = shift+ctrl+k=goto_split:top
+keybind = shift+ctrl+l=goto_split:right
 
 # vim: filetype=conf
