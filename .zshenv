@@ -1,5 +1,5 @@
-CARGOPATH=$HOME/.cargo/bin                # cargo path
-GHCPATH=$HOME/.cabal/bin:$HOME/.ghcup/bin # Haskell install path
+# CARGOPATH=$HOME/.cargo/bin                # cargo path
+# GHCPATH=$HOME/.cabal/bin:$HOME/.ghcup/bin # Haskell install path
 
 export PATH=$HOME/.local/bin:$PATH
 export CPATH=$HOME/.local/include:$CPATH
