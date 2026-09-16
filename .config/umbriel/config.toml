@@ -1,0 +1,361 @@
+[general]
+autostart = [
+  "noctalia",
+  "ibus start",
+
+  "gsettings set org.gnome.desktop.interface gtk-theme                'adw-gtk3'",
+  "gsettings set org.gnome.desktop.interface icon-theme               'Adwaita'",
+  "gsettings set org.gnome.desktop.interface cursor-theme             'Simp1e-Gruvbox-Dark'",
+  "gsettings set org.gnome.desktop.interface color-scheme             'prefer-dark'",
+  "gsettings set org.gnome.desktop.interface font-name                'Inter'",
+  "gsettings set org.gnome.desktop.interface monospace-font-name      'Fira Code'",
+  "gsettings set org.gnome.desktop.interface gtk-im-module            'ibus'",
+  "gsettings set org.gnome.desktop.interface gtk-enable-primary-paste 'true'"
+]
+xwayland                = true
+show_cheatsheet         = false
+focus_on_activate       = false
+honor_restored_maximize = false
+
+[environment]
+QT_QPA_PLATFORMTHEME  = "gtk3"
+PROTON_ENABLE_WAYLAND = "1"
+
+[events]
+lid_close = "noctalia msg session lock-and-suspend"
+
+[output.eDP-1]
+tearing = true
+workspace_axis = "horizontal"
+
+[workspaces]
+back_and_forth = false
+empty_above    = false
+
+[colors]
+background       = "#282828"
+text_primary     = "#ebdbb2"
+text_muted       = "#928374"
+accent_primary   = "#b8bb26"
+accent_secondary = "#8ec07c"
+warning          = "#fabd2f"
+error            = "#fb4934"
+insert_hint      = "#83a59880"
+# backdrop         = "#000000"
+# shadow           = "#0000007f"
+
+[colors.border]
+focused              = "#83a598"
+unfocused            = "#3c3836"
+outer                = "#282828"
+# scratchpad_focused   = "#d3869b"
+# scratchpad_unfocused = "#b16286"
+
+[colors.overview]
+background_tint      = "#28282830"
+badge                = "#83a598"
+# workspace_background = "#00000044"
+
+[appearance]
+prefer_no_csd      = true
+border_width       = 2
+outer_border_width = 0
+corner_radius      = 8
+drag_opacity       = 0.75
+
+[appearance.blur]
+enabled    = true
+optimized  = true
+passes     = 3
+radius     = 3
+noise      = 0.02
+brightness = 0.9
+contrast   = 0.9
+saturation = 1.1
+
+[appearance.shadow]
+enabled  = true
+softness = 10
+offset_x = 2
+offset_y = 2
+
+[input]
+middle_click_paste = true
+window_drag_toggle = "none"
+
+[input.keyboard]
+layout         = ""
+variant        = ""
+options        = ""
+repeat_rate    = 25
+repeat_delay   = 600
+numlock_toggle = true
+track_layout   = "global"
+
+[input.touchpad]
+tap                       = true
+natural_scroll            = true
+# accel_profile             = "adaptive"
+# sensitivity               = 0.5
+# scroll_factor             = 1.5
+# disable_while_typing      = true
+# disable_on_external_mouse = true
+# click_method              = "clickfinger"
+
+[input.mouse]
+# natural_scroll     = false
+accel_profile      = "flat"
+sensitivity        = 0.0
+scroll_wheel_step  = 60
+# scroll_button      = "MouseBack"
+# scroll_button_lock = false
+
+[input.tablet]
+enabled               = false
+# map_to_output         = "DP-1"
+# map_to_focused_output = false
+# map_to_focused_window = false
+# left_handed           = false
+# calibration_matrix    = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+
+[input.cursor]
+theme            = "Simp1e-Gruvbox-Dark"
+size             = 24
+hardware_cursor  = true
+follows_focus    = false
+hide_when_typing = false
+hide_timeout_ms  = 0
+
+[input.focus]
+follows_mouse            = false
+# follows_mouse_max_scroll = 0.5
+
+[[input.device]]
+name    = "AT Translated Set 2 keyboard"
+layout  = "br"
+variant = ""
+options = "caps:escape"
+
+[keybinds]
+"Mod+Return" = "spawn:wezterm"
+"Mod+Q"      = "window-close"
+"Mod+D"      = "spawn:noctalia msg panel-toggle launcher"
+"Mod+E"      = "spawn:noctalia msg panel-toggle session"
+"Mod+C"      = "spawn:noctalia msg panel-toggle control-center"
+
+"Mod+H" = "window-focus-left"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+
+"Mod+Shift+H" = "column-move-left"
+"Mod+Shift+J" = "window-move-down"
+"Mod+Shift+K" = "window-move-up"
+"Mod+Shift+L" = "column-move-right"
+
+"Mod+T"       = "window-toggle-floating"
+"Mod+Shift+T" = "window-focus-switch-floating"
+"Mod+P"       = "window-toggle-pinned"
+"Mod+M"       = "window-toggle-maximize-to-edges"
+
+"Mod+O" = { action = "overview-toggle", repeat = false }
+
+"Mod+F"       = "window-toggle-fullscreen"
+"Mod+Ctrl+F"  = "window-toggle-maximize"
+"Mod+R"       = "window-cycle-width"
+"Mod+Shift+R" = "window-cycle-width-back"
+
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+"Mod+0" = "workspace-switch:10"
+
+"Mod+Shift+1"  = "window-move-to-workspace:1"
+"Mod+Shift+2"  = "window-move-to-workspace:2"
+"Mod+Shift+3"  = "window-move-to-workspace:3"
+"Mod+Shift+4"  = "window-move-to-workspace:4"
+"Mod+Shift+5"  = "window-move-to-workspace:5"
+"Mod+Shift+6"  = "window-move-to-workspace:6"
+"Mod+Shift+7"  = "window-move-to-workspace:7"
+"Mod+Shift+8"  = "window-move-to-workspace:8"
+"Mod+Shift+9"  = "window-move-to-workspace:9"
+"Mod+Shift+0"  = "window-move-to-workspace:10"
+
+"XF86AudioMute"        = "spawn:wpctl set-mute   @DEFAULT_SINK@ toggle"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_SINK@ 5%-"
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_SINK@ 5%+ -l 1.0"
+
+"XF86MonBrightnessDown" = "spawn:brightnessctl set 5%-"
+"XF86MonBrightnessUp"   = "spawn:brightnessctl set 5%+"
+
+"XF86AudioPlay" = "spawn:playerctl play-pause"
+"XF86AudioStop" = "spawn:playerctl stop"
+"XF86AudioPrev" = "spawn:playerctl previous"
+"XF86AudioNext" = "spawn:playerctl next"
+
+"XF86PowerOff" = "spawn:noctalia msg panel-toggle session"
+
+"Print"     = "spawn:noctalia msg screenshot-fullscreen"
+"Mod+Print" = "spawn:noctalia msg screenshot-region"
+
+[layout]
+mode          = "dwindle"
+gap           = 8
+width_presets = [0.333, 0.5, 0.667]
+
+[layout.struts]
+left   = 0
+right  = 0
+top    = 0
+bottom = 0
+
+[layout.scrolling]
+default_width_fraction = 0.5
+center_underfull_strip = true
+center_focused         = "never"
+
+[layout.dwindle]
+# preserve_split = false
+
+[layout.master]
+position               = "left"
+default_width_fraction = 0.55
+new_on_top             = true
+new_becomes_master     = false
+
+[[window_rule]]
+blur           = true
+blur_optimized = false
+
+[[window_rule]]
+match.app_id     = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size     = [1020, 900]
+
+[[window_rule]]
+match.app_id     = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size     = [800, 600]
+
+[[window_rule]]
+match.title      = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+
+[[window_rule]]
+match.title      = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused  = false
+default_pinned   = true
+
+[[layer_rule]]
+match.namespace   = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur              = true
+blur_ignore_alpha = 0.5
+blur_popups       = true
+blur_optimized    = false
+
+[animation]
+enabled     = true
+duration_ms = 250
+curve       = "easeout"
+
+[animation.windows_in]
+enabled     = true
+duration_ms = 150
+curve       = "easeout"
+style       = "popin"
+scale       = 0.85
+# shader      = "shaders/reveal.glsl"
+
+[animation.windows_out]
+enabled     = true
+duration_ms = 150
+curve       = "easeout"
+style       = "fade"
+# shader      = "shaders/reveal.glsl"
+
+[animation.windows_move]
+enabled     = true
+duration_ms = 250
+curve       = "snappy"
+# shader      = "shaders/squash.glsl"
+
+[animation.workspaces]
+enabled     = true
+duration_ms = 250
+curve       = "easeout"
+
+[animation.overview]
+enabled         = true
+duration_ms     = 250
+curve           = "easeout"
+workspace_curve = "spring:1,1000"
+
+[animation.scratchpad]
+enabled     = false
+duration_ms = 250
+curve       = "easeout"
+dim         = 0.5
+blur        = false
+scale       = 0.0
+maximize    = false
+fullscreen  = false
+
+[animation.border]
+enabled     = false
+duration_ms = 250
+curve       = "easeout"
+
+[animation.dim_unfocused]
+enabled     = false
+duration_ms = 250
+curve       = "easeout"
+dim         = 0.0
+
+[animation.layers]
+enabled     = false
+duration_ms = 250
+curve       = "easeout"
+
+[animation.beziers]
+# myBezier = [0.05, 0.9, 0.1, 1.0]
+
+[animation.springs]
+# myBounce = { damping = 0.5, stiffness = 200 }
+
+[overview]
+zoom                     = 0.5
+scroll_factor_horizontal = 1.0
+scroll_factor_vertical   = 1.0
+# background_blur     = true
+# workspace_wallpaper = true
+# shortcuts           = true
+# shortcut_keys       = "1234567890"
+
+[hot_corners.top_left]
+enabled  = false
+delay_ms = 500
+action   = "overview-open"
+
+[hot_corners.top_right]
+enabled  = false
+delay_ms = 500
+action   = "overview-close"
+
+[hot_corners.bottom_left]
+enabled  = false
+delay_ms = 500
+action   = "overview-toggle"
+
+[hot_corners.bottom_right]
+enabled  = false
+delay_ms = 500
+action   = "spawn:notify-send 'Bottom right'"

@@ -40,4 +40,4 @@ set $faded_aqua     #427B58
 set $faded_blue     #076678
 set $faded_purple   #8F3F71
 
-# vi:filetype=swayconfig
+# vi: ft=swayconfig

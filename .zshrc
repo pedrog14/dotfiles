@@ -6,13 +6,13 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '$HOME/.zshrc'
+zstyle :compinstall filename "${HOME}/.zshrc"
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Customizing prompt
+# Prompt customization
 setopt PROMPT_SUBST
 
 autoload -Uz colors && colors
@@ -26,7 +26,7 @@ zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:git:*' formats ' [%b%u%c]'
 zstyle ':vcs_info:git:*' actionformats ' [%b|%a%u%c]'
 precmd() {
-    vcs_info
+  vcs_info
 }
 
 PROMPT='%{$fg[cyan]%}[%n@%m %~]${vcs_info_msg_0_}\$%{$reset_color%} '
@@ -34,9 +34,12 @@ RPROMPT='%{$fg[cyan]%}[%*]%{$reset_color%}'
 
 ZLE_RPROMPT_INDENT=0
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Source plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-source <(fzf --zsh)
 source <(rustup completions zsh)
+source <(pip completion --zsh)
+
+[ -f "/home/pedrog/.ghcup/env" ] && . "/home/pedrog/.ghcup/env" # ghcup-env

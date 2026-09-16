@@ -1,0 +1,30 @@
+enable-mouse = yes
+library-page-tags = album
+list-format = "[[%track%: ][%artist% - ]%title%]|%file%"
+
+enable-colors = yes
+
+color background = 0
+
+color title      = 15/0
+color title-bold = 11,bold
+
+color line       = 15
+color line-flags = 13,bold
+
+color list      = 11
+color list-bold = bold
+
+color browser-directory = 11
+color browser-playlist  = 13
+
+color progressbar            = 10/0
+color progressbar-background = 15
+
+color status-state = 11/0,bold
+color status-song  = 15/0
+color status-time  = 11
+
+color alert = 11,bold
+
+# vim: ft=conf

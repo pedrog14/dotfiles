@@ -1,123 +1,83 @@
-/*-------------------------------Gruvbox Theme--------------------------------*/
-@define-color dark0_hard     #1D2021;
-@define-color dark0          #282828;
-@define-color dark0_soft     #32302F;
-@define-color dark1          #3C3836;
-@define-color dark2          #504945;
-@define-color dark3          #665C54;
-@define-color dark4          #7C6F64;
+:root {
+  --accent-blue: #83a598;
+  --accent-teal: #8ec07c;
+  --accent-green: #b8bb26;
+  --accent-yellow: #fabd2f;
+  --accent-orange: #fe8019;
+  --accent-red: #fb4934;
+  --accent-pink: #d3869b;
+  --accent-purple: #b16286;
+  --accent-slate: #458588;
 
-@define-color light0_hard    #F9F5D7;
-@define-color light0         #FBF1C7;
-@define-color light0_soft    #F2E5BC;
-@define-color light1         #EBDBB2;
-@define-color light2         #D5C4A1;
-@define-color light3         #BDAE93;
-@define-color light4         #A89984;
+  --accent-bg-color: var(--accent-blue);
+  --accent-fg-color: #ebdbb2;
+  --accent-color: var(--accent-blue);
 
-@define-color gray           #928374;
+  --success-bg-color: var(--accent-green);
+  --success-fg-color: #ebdbb2;
+  --success-color: var(--accent-green);
 
-@define-color bright_red     #FB4934;
-@define-color bright_orange  #FE8019;
-@define-color bright_yellow  #FABD2F;
-@define-color bright_green   #B8BB26;
-@define-color bright_aqua    #8EC07C;
-@define-color bright_blue    #83A598;
-@define-color bright_purple  #D3869B;
+  --warning-bg-color: var(--accent-yellow);
+  --warning-fg-color: #ebdbb2;
+  --warning-color: var(--accent-yellow);
 
-@define-color neutral_red    #CC241D;
-@define-color neutral_orange #D65D0E;
-@define-color neutral_yellow #D79921;
-@define-color neutral_green  #98971A;
-@define-color neutral_aqua   #689D6A;
-@define-color neutral_blue   #458588;
-@define-color neutral_purple #B16286;
+  --error-bg-color: var(--accent-red);
+  --error-fg-color: #ebdbb2;
+  --error-color: var(--accent-red);
 
-@define-color faded_red      #9D0006;
-@define-color faded_orange   #AF3A03;
-@define-color faded_yellow   #B57614;
-@define-color faded_green    #79740E;
-@define-color faded_aqua     #427B58;
-@define-color faded_blue     #076678;
-@define-color faded_purple   #8F3F71;
-/*----------------------------------------------------------------------------*/
+  --window-bg-color: #32302f;
+  --window-fg-color: #ebdbb2;
 
-@define-color window_bg_color @dark0;
-@define-color window_fg_color @light1;
+  --view-bg-color: #282828;
+  --view-fg-color: #ebdbb2;
 
-@define-color view_bg_color @dark0;
-@define-color view_fg_color @light1;
+  --headerbar-bg-color: #32302f;
+  --headerbar-fg-color: #ebdbb2;
+  --headerbar-backdrop-color: #32302f;
+  --headerbar-border-color: transparent;
 
-@define-color accent_color @bright_blue;
-@define-color accent_bg_color @bright_blue;
-@define-color accent_fg_color @light1;
+  --sidebar-bg-color: #3c3836;
+  --sidebar-fg-color: #ebdbb2;
+  --sidebar-backdrop-color: #3c3836;
+  --sidebar-border-color: transparent;
 
-@define-color headerbar_bg_color @dark1;
-@define-color headerbar_fg_color @light1;
-@define-color headerbar_border_color @light1;
-@define-color headerbar_backdrop_color @dark0;
+  --secondary-sidebar-bg-color: #32302f;
+  --secondary-sidebar-fg-color: #ebdbb2;
+  --secondary-sidebar-backdrop-color: #32302f;
+  --secondary-sidebar-border-color: transparent;
 
-@define-color popover_bg_color @dark1;
-@define-color popover_fg_color @light1;
+  --card-bg-color: #3c3836;
+  --card-fg-color: #ebdbb2;
 
-@define-color dialog_bg_color @popover_bg_color;
-@define-color dialog_fg_color @popover_fg_color;
+  --overview-bg-color: #3c3836;
+  --overview-fg-color: #ebdbb2;
 
-@define-color card_bg_color @dark1;
-@define-color card_fg_color @light1;
+  --thumbnail-bg-color: #504945;
+  --thumbnail-fg-color: #ebdbb2;
 
-@define-color thumbnail_bg_color @dark1;
+  --active-toggle-bg-color: #3c3836;
+  --active-toggle-fg-color: #ebdbb2;
 
-@define-color sidebar_bg_color @dark1;
-@define-color sidebar_fg_color @light1;
-@define-color sidebar_backdrop_color @dark1;
-@define-color secondary_sidebar_bg_color @dark1;
-@define-color secondary_sidebar_backdrop_color @dark1;
+  --dialog-bg-color: #3c3836;
+  --dialog-fg-color: #ebdbb2;
 
-@define-color success_color @bright_aqua;
-@define-color success_bg_color @success_color;
-@define-color success_fg_color @light1;
-
-@define-color warning_color @bright_yellow;
-@define-color warning_bg_color @warning_color;
-@define-color warning_fg_color @light1;
-
-@define-color error_color @bright_red;
-@define-color error_bg_color @error_color;
-@define-color error_fg_color @light1;
-
-@define-color destructive_color @bright_red;
-@define-color destructive_bg_color @destructive_color;
-@define-color destructive_fg_color @light1;
-
-.navigation-sidebar {
-    background-color: @dark1;
-}
-
-/** Some apps use titlebar class and some window */
-.titlebar,
-window {
-    border-radius: 0;
-    box-shadow: none;
-}
-
-/** also remove shadows */
-decoration {
-    box-shadow: none;
-}
-
-decoration:backdrop {
-    box-shadow: none;
-}
-
-tooltip.background {
-    background-color: @dark0;
-    border: 1px solid @light1;
-    border-radius: 4px;
+  --popover-bg-color: #3c3836;
+  --popover-fg-color: #ebdbb2;
 }
 
 tooltip * {
-    padding: 0;
-    color: @light1;
-    text-shadow: none;
+  padding: 0px 2px;
+  color: #ebdbb2;
+  text-shadow: none;
+}
+
+tooltip.background {
+  background-color: #282828;
+  border: 1px solid #504945;
+  border-radius: 8px;
+}
+
+toast {
+  background-color: var(--window-bg-color);
+  color: var(--window-fg-color);
 }

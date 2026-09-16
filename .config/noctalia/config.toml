@@ -1,0 +1,147 @@
+[bar]
+order = [ "Top" ]
+
+[bar.Top]
+capsule_radius = 8
+center = [ "active_window" ]
+end = [
+  "tray",
+  "notifications",
+  "clipboard",
+  "bluetooth",
+  "network",
+  "volume",
+  "brightness",
+  "battery",
+  "clock",
+  "session"
+]
+font_weight = 400
+margin_ends = 0
+padding = 12
+radius = 8
+radius_top_left = 0
+radius_top_right = 0
+start = [ "control-center", "launcher", "workspaces", "media" ]
+widget_spacing = 12
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+[desktop_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[desktop_widgets.widget]
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+[idle.behavior.lock]
+action = "lock"
+enabled = true
+timeout = 600.0
+
+[idle.behavior.lock-and-suspend]
+action = "lock_and_suspend"
+enabled = true
+timeout = 900.0
+
+[idle.behavior.screen-off]
+action = "screen_off"
+enabled = true
+timeout = 660.0
+
+[keybinds]
+left  = [  "Left", "Ctrl+h" ]
+down  = [  "Down", "Ctrl+j", "Ctrl+n" ]
+up    = [    "Up", "Ctrl+k", "Ctrl+p" ]
+right = [ "Right", "Ctrl+l" ]
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+[lockscreen_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+box_height = 196.0
+box_width = 810.0
+cx = 960.0
+cy = 898.0
+output = "eDP-1"
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+background_color = "surface_variant"
+background_opacity = 1.0
+background_radius = 12.0
+center_password_text = false
+input_opacity = 1.0
+input_radius = 6.0
+layout = "regular"
+show_caps_lock = true
+show_keyboard_layout = true
+show_login_button = true
+show_media = true
+show_session_buttons = true
+show_unlock_hint = true
+show_weather = true
+
+[shell]
+font_family = "Fira Code"
+polkit_agent = true
+
+[shell.greeter_sync]
+auto_sync = true
+
+[shell.panel]
+clipboard_placement = "attached"
+launcher_placement = "attached"
+list_item_background = true
+polkit_placement = "attached"
+
+[shell.screenshot]
+confirm_region = true
+
+[theme]
+builtin = "Gruvbox"
+mode = "dark"
+source = "builtin"
+
+[theme.templates]
+enable_community_templates = false
+
+[wallpaper.default]
+path = "/home/pedrog/.local/share/backgrounds/background.jpg"
+
+[wallpaper.last]
+path = "/home/pedrog/.local/share/backgrounds/background.jpg"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/pedrog/.local/share/backgrounds/background.jpg"
+
+[widget.active_window]
+max_length = 400
+min_length = 0
+
+[widget.media]
+hide_when_no_media = true
+min_length = 0
+title_scroll = "on_hover"
+
+[widget.workspaces]
+style = "minimal"

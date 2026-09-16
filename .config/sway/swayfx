@@ -1,0 +1,8 @@
+animation_duration_ms 250
+
+corner_radius 8
+
+shadows enable
+shadow_color #0000007f
+
+# vim: ft=swayconfig

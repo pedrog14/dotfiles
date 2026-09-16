@@ -1,189 +1,152 @@
-# SwayWM configs
+# Environment Variables
+exec systemctl --user set-environment QT_QPA_PLATFORMTHEME=gtk3
+exec systemctl --user set-environment PROTON_ENABLE_WAYLAND=1
 
-## Autostart
-exec autotiling
-exec mako
-exec easyeffects --gapplication-service
-
-## Variables
-set $mod Mod4
-set $left h
-set $down j
-set $up k
+# Variables
+set $left  h
+set $down  j
+set $up    k
 set $right l
-set $term ghostty
-set $menu rofi -show drun
-set $power-menu rofi -show p \
-                     -modi p:"power-menu" \
-                     -theme-str "window {width: 10em;} listview {lines: 4;}"
+set $mod   Mod4
 
-## Input
-input type:keyboard {
-    xkb_layout br
-    xkb_numlock enabled
-
-    xkb_options caps:escape
+# Autostart
+exec {
+  noctalia
+  autotiling
 }
 
+# Input
+input "1:1:AT_Translated_Set_2_keyboard" {
+  xkb_layout  br
+  xkb_options caps:escape
+  xkb_numlock enabled
+}
+exec ibus start
+
 input type:pointer {
-    accel_profile flat
+  accel_profile flat
 }
 
 input type:touchpad {
-    natural_scroll enabled
-    tap enabled
+  tap            enabled
+  drag_lock      enabled
+  natural_scroll enabled
 }
 
-## Output
-output * bg $HOME/.local/share/backgrounds/gruv-portal-cake.png fill
+# Window Rules
+for_window {
+  [app_id="org.gnome.Calculator"] floating enable
+}
 
-### Key bindings
+# Bindings
+bindsym {
+  $mod+Return  exec ghostty
+  $mod+d       exec noctalia msg panel-toggle launcher
+  $mod+e       exec noctalia msg panel-toggle session
+  $mod+q       kill
+  $mod+c       reload
 
-## Basics
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+q kill
-bindsym $mod+d exec $menu
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec $power-menu
+  $mod+$left  focus left
+  $mod+$down  focus down
+  $mod+$up    focus up
+  $mod+$right focus right
+
+  $mod+Shift+$left  move left
+  $mod+Shift+$down  move down
+  $mod+Shift+$up    move up
+  $mod+Shift+$right move right
+
+  $mod+1 workspace number 1
+  $mod+2 workspace number 2
+  $mod+3 workspace number 3
+  $mod+4 workspace number 4
+  $mod+5 workspace number 5
+  $mod+6 workspace number 6
+  $mod+7 workspace number 7
+  $mod+8 workspace number 8
+  $mod+9 workspace number 9
+  $mod+0 workspace number 10
+
+  $mod+Shift+1 move container to workspace number 1
+  $mod+Shift+2 move container to workspace number 2
+  $mod+Shift+3 move container to workspace number 3
+  $mod+Shift+4 move container to workspace number 4
+  $mod+Shift+5 move container to workspace number 5
+  $mod+Shift+6 move container to workspace number 6
+  $mod+Shift+7 move container to workspace number 7
+  $mod+Shift+8 move container to workspace number 8
+  $mod+Shift+9 move container to workspace number 9
+  $mod+Shift+0 move container to workspace number 10
+
+  $mod+b splith
+  $mod+v splitv
+  $mod+n layout toggle split
+
+  $mod+s layout stacking
+  $mod+w layout tabbed
+
+  $mod+f fullscreen
+
+  $mod+t floating toggle
+  $mod+Shift+t focus mode_toggle
+
+  $mod+a focus parent
+
+  $mod+Shift+minus move scratchpad
+  $mod+minus scratchpad show
+
+  $mod+r mode 'resize'
+
+  XF86MonBrightnessDown exec brightnessctl set 5%-
+  XF86MonBrightnessUp   exec brightnessctl set 5%+
+
+  XF86AudioMute        exec wpctl set-mute   @DEFAULT_SINK@ toggle
+  XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
+  XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ -l 1.0
+
+  XF86AudioPlay exec playerctl play-pause
+  XF86AudioStop exec playerctl stop
+  XF86AudioPrev exec playerctl previous
+  XF86AudioNext exec playerctl next
+
+  XF86PowerOff exec noctalia msg panel-toggle session
+
+  Print  exec noctalia exec screenshot-fullscreen
+  $mod+p exec noctalia exec screenshot-region
+}
+
+mode 'resize' {
+  bindsym {
+    $left  resize shrink width  10px
+    $down  resize grow   height 10px
+    $up    resize shrink height 10px
+    $right resize grow   width  10px
+
+    Return mode 'default'
+    Escape mode 'default'
+  }
+}
 
 floating_modifier $mod normal
 
-## Movement
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
-
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
-
-## Workspaces
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
-
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
-
-## Layout
-bindsym $mod+b splith
-bindsym $mod+v splitv
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-bindsym $mod+f fullscreen
-
-bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+space focus mode_toggle
-bindsym $mod+a focus parent
-
-## Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
-
-## Resizing
-mode "resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-### Utilities
-
-## Power Button
-bindsym --locked XF86PowerOff exec $power-menu
-
-## Adjust brightness
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp   exec brightnessctl set 5%+
-
-## Adjust volume
-bindsym --locked XF86AudioMute        exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.0
-bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0
-
-## Player
-bindsym --locked XF86AudioPlay exec playerctl play-pause
-bindsym --locked XF86AudioPrev exec playerctl previous
-bindsym --locked XF86AudioNext exec playerctl next
-bindsym --locked XF86AudioStop exec playerctl stop
-
-## Take Screenshot
-bindsym Print        exec 'grim $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
-bindsym $mod+Shift+p exec 'grim -g "$(slurp)" $HOME/Imagens/$(date +"%Y%m%d-%H%M%S").png'
-
-## Emoji Menu
-bindsym $mod+m exec rofimoji --files emojis kaomoji
-
-## Window rules
-for_window [app_id="org.gnome.Calculator"] floating enable
-for_window [title="nmtui"] floating enable
-
-## Idling
-exec swayidle -w \
-     timeout 300 'swaylock -f' \
-     timeout 360 'swaymsg "output * power off"' \
-     resume 'swaymsg "output * power on"' \
-     before-sleep 'swaylock -f'
-
-## Appearance customization
+# Appearance
 default_border pixel 2
-gaps inner 6
+gaps inner 8
 font pango: Fira Code 9
 
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-    gsettings set $gnome-schema gtk-theme "adw-gtk3-dark"
-    gsettings set $gnome-schema icon-theme "Papirus-Dark"
-    gsettings set $gnome-schema cursor-theme "Simp1e-Gruvbox-Dark"
-    gsettings set $gnome-schema font-name "Inter"
-    gsettings set $gnome-schema color-scheme "prefer-dark"
-}
-seat seat0 xcursor_theme "Simp1e-Gruvbox-Dark"
+exec bash -c "~/.config/gtk-4.0/settings.sh" # GTK 4.0 Settings
+seat seat0 xcursor_theme 'Simp1e-Gruvbox-Dark'
 
-## Colorscheme
-include colorschemes/gruvbox
+include colorschemes/gruvbox/dark
 
-# target                  title          bg            text     indicator      border
-client.background                        $dark0
-client.focused            $neutral_blue  $bright_blue  $light1  $neutral_blue  $bright_blue
-client.focused_inactive   $dark1         $dark2        $light1  $dark1         $dark2
-client.focused_tab_title  $dark1         $dark2        $light1
-client.unfocused          $dark0         $dark1        $gray    $dark0         $dark1
-client.urgent             $neutral_red   $bright_red   $light1  $neutral_red   $bright_red
-client.placeholder        $dark1         $dark2        $light1  $dark1         $dark2
+# target                 title bg    text  indicator     border
+client.background              $bg0
+client.focused           $blue $blue $fg1  $neutral_blue $blue
+client.focused_inactive  $bg1  $bg2  $fg1  $bg1          $bg2
+client.focused_tab_title $bg1  $bg2  $fg1
+client.unfocused         $bg0  $bg1  $gray $bg0          $bg1
+client.urgent            $red  $red  $fg1  $neutral_red  $red
+client.placeholder       $bg1  $bg2  $fg1  $bg1          $bg2
 
-## Status Bar
-bar {
-    swaybar_command waybar
-}
-
+include swayfx
 include /etc/sway/config.d/*
